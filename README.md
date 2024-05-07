@@ -77,7 +77,7 @@ Here, `p` is the port of the REST/webhook where Rasa can connect.
 
 **5. Additionally, in `index.html`, on line 176, change the port as needed**<br>
 
-![image](https://github.com/memercz/chatbot_deployment/assets/161113570/a81ca5b2-53b5-4c79-b0a2-68c79787df24)
+![image](https://github.com/memercz/chatbot_deployment/assets/161113570/21f3987f-bffc-4269-9e2d-0bfe3195b24d)
 
 
 **6. To open Rasa in the local server, you can choose either of the following options:**
