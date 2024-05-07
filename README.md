@@ -74,7 +74,9 @@ Example model path: `models\20240507-113555-immense-distance.tar.gz`.
 
 
 Here, `p` is the port of the REST/webhook where Rasa can connect.
-**5. Additionally, in `index.html`, on line 176, change the port as needed**
+
+**5. Additionally, in `index.html`, on line 176, change the port as needed**<br>
+
 ![image](https://github.com/memercz/chatbot_deployment/assets/161113570/a81ca5b2-53b5-4c79-b0a2-68c79787df24)
 
 
