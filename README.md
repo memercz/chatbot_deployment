@@ -1,6 +1,6 @@
-# Thesis Chatbot Deployment Tutorial
+# Thesis Chatbot Deployment Guide
 
-## How to Install
+## Installation Guide
 
 **1. Install Python**
 
@@ -51,7 +51,7 @@ pip3 install 'rasa[full]'
 ```
 
 
-## Running Rasa
+## Running the chatbot (Rasa) Guide
 
 **1. Copy the files from the GitHub link.**
 
