@@ -67,7 +67,8 @@ A model with its path will be created when the training is done. <br>
 Example model path: `models\20240507-113555-immense-distance.tar.gz`.
 
 Sample image:
-![image](https://github.com/memercz/chatbot_deployment/assets/161113570/bcd14a03-55dc-4949-9aff-eb449213d242)
+![image](https://github.com/memercz/chatbot_deployment/assets/161113570/b1c0f114-fd46-430e-832c-2ce086acf586)
+
 
 
 **4. Next, run the following command in the terminal:**
