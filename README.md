@@ -74,14 +74,15 @@ Sample image:
 **4. Next, run the following command in the terminal:**
 
 ```
-rasa run --enable-api --cors "*" --debug --endpoints endpoints.yml -m [path of the model] -p 6006
+rasa run --enable-api --cors "*" --debug --endpoints endpoints.yml -m [path of the model] -p <port>
 ```
+Here, `p` is the port of the REST/webhook where Rasa can connect. Change it accordingly.
+<br>
 Sample command:
 ```
 rasa run --enable-api --cors "*" --debug --endpoints endpoints.yml -m models\20240507-113555-immense-distance.tar.gz -p 6006
 ```
 
-Here, `p` is the port of the REST/webhook where Rasa can connect.
 
 **5. Additionally, in `index.html`, on line 176, change the port as needed**<br>
 
