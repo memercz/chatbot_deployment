@@ -43,7 +43,7 @@ python3 -m spacy download en_core_web_md
 pip3 install "rasa[transformers]"
 ```
 
-**5. Optional: Install Additional Dependencies**
+**5. Optional: Install All Additional Dependencies**
 
 If some dependencies are not met when running Rasa:
 ```
