@@ -63,8 +63,8 @@ If some dependencies are not met when running Rasa:
 `rasa train --domain data/domain --data data/nlu data/stories --config myInitialconfig.yml`
 ```
 
-**A model with its path will be created when the training is done. 
-Example model path: `models\20240507-113555-immense-distance.tar.gz`.**
+A model with its path will be created when the training is done. <br>
+Example model path: `models\20240507-113555-immense-distance.tar.gz`.
 
 **4. Next, run the following command in the terminal:**
 
