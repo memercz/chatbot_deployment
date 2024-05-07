@@ -66,12 +66,19 @@ rasa train --domain data/domain --data data/nlu data/stories --config myInitialc
 A model with its path will be created when the training is done. <br>
 Example model path: `models\20240507-113555-immense-distance.tar.gz`.
 
+Sample image:
+![image](https://github.com/memercz/chatbot_deployment/assets/161113570/bcd14a03-55dc-4949-9aff-eb449213d242)
+
+
 **4. Next, run the following command in the terminal:**
 
 ```
 rasa run --enable-api --cors "*" --debug --endpoints endpoints.yml -m [path of the model] -p 6006
 ```
-
+Sample command:
+```
+rasa run --enable-api --cors "*" --debug --endpoints endpoints.yml -m models\20240507-113555-immense-distance.tar.gz -p 6006
+```
 
 Here, `p` is the port of the REST/webhook where Rasa can connect.
 
