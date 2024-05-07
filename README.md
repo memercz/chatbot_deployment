@@ -84,6 +84,8 @@ Here, `p` is the port of the REST/webhook where Rasa can connect.
 
 **- Option 1:**
 
+   On new terminal, type:
+
   ```
   python -m http.server 8000
   ```
