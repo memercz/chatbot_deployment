@@ -8,15 +8,19 @@
 ```   
 `python -m pip uninstall pip`
 ```
+
 <br>
+
 ```
 `python -m ensurepip`
 ```
+
 <br>
+
 ```
 `python -m pip install -U pip`
 ```
-<br>
+
 
 
 **2. Install Rasa**
