@@ -1,48 +1,75 @@
-# chatbot_deployment
+# Chatbot Deployment
 
-# How to install
+## How to Install
 
-**Install python**
-  install python == 3.8
-  
-  python -m pip uninstall pip
-  python -m ensurepip
-  python -m pip install -U pip
+**1. Install Python**
 
-**Install rasa**
-  pip install rasa
-
-**Install dependencies for spaCy**
-  pip3 install 'rasa[spacy]'
-  python3 -m spacy download en_core_web_md
-
-**Install dependencies for transformer**
-  pip3 install "rasa[transformers]"
-
-**Optional. For additional dependencies (if some dependencies are note met when running rasa)**
-  pip3 install 'rasa[full]'
-
-**Running rasa**
-
-1. Copy the files in the github link:
-2. Make sure the directory is within that file
-3. in the terminal:
-    rasa train --domain data/domain --data data/nlu data/stories --config myInitialconfig.yml
-4. A model with its path are created when done training the model. Example of model with its path:
-   models\20240507-113555-immense-distance.tar.gz
+   - Install Python version 3.8
    
-6. Next step is to run this in the terminal:
-    rasa run --enable-api --cors "*" --debug --endpoints endpoints.yml -m [path of the model] -p 6006
- Where p is the port of the rest/webhook the rasa can conenct
-8. What i do to open the rasa in the local server:
-   Option 1:
-     python -m http.server 8000
-   
-     Then open localhost:8000
-   
-   Option 2:
-     Copy the path of index.html
-9. Moreover in index.html, in line 176
-      Change the port kung asa need
-  
-   
+python -m pip uninstall pip
+python -m ensurepip
+python -m pip install -U pip
+
+
+**2. Install Rasa**
+
+pip install rasa
+
+
+
+**3. Install Dependencies for spaCy**
+
+pip3 install 'rasa[spacy]'
+python3 -m spacy download en_core_web_md
+
+
+
+**4. Install Dependencies for Transformer**
+
+pip3 install "rasa[transformers]"
+
+
+**5. Optional: Install Additional Dependencies**
+
+If some dependencies are not met when running Rasa:
+
+pip3 install 'rasa[full]'
+
+
+
+## Running Rasa
+
+1. Copy the files from the GitHub link.
+
+2. Make sure the directory is within that file.
+
+3. In the terminal, run:
+
+rasa train --domain data/domain --data data/nlu data/stories --config myInitialconfig.yml
+
+
+A model with its path will be created when the training is done. Example model path: `models\20240507-113555-immense-distance.tar.gz`.
+
+4. Next, run the following command in the terminal:
+
+rasa run --enable-api --cors "*" --debug --endpoints endpoints.yml -m [path of the model] -p 6006
+
+
+
+Here, `p` is the port of the REST/webhook where Rasa can connect.
+
+5. To open Rasa in the local server, you can choose either of the following options:
+
+- Option 1:
+
+  ```
+  python -m http.server 8000
+  ```
+
+  Then open `localhost:8000` in your browser.
+
+- Option 2:
+
+  Copy the path of `index.html`.
+
+6. Additionally, in `index.html`, on line 176, change the port as needed.
