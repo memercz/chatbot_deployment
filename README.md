@@ -76,7 +76,7 @@ Sample image:
 ```
 rasa run --enable-api --cors "*" --debug --endpoints endpoints.yml -m [path of the model] -p <port>
 ```
-Here, `p` is the port of the REST/webhook where Rasa can connect. Change it accordingly.
+Here, `p` is the port of the where the Rasa server will run. Change it accordingly.
 <br>
 Sample command:
 ```
