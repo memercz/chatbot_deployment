@@ -1,0 +1,53 @@
+version: '3.1'
+intents:
+- manuscript_template
+- title_page_templage
+- application_present_proposal_template
+- form21a
+- proposal_template
+- guidelines_thesis_defense_application_and_submission
+
+responses:
+  utter_manuscript_template:
+  - text: "Here is the CSM Manuscript Body Template: https://drive.google.com/file/d/13LdcWFlcKfOdDMl5UL2Tdt-m2XzkO2_o/view"
+
+  utter_title_page_template:
+  - text: "Choose below what title page template you needed: "
+    buttons:
+    - title: "TitlePage_1Ad_1CoAd_1Panel_template"
+      payload: "https://drive.google.com/file/d/130MLvqqvHIJN1cWvKAYDXFo6v5TQ6xhn/view"
+    - title: "TitlePage_1Ad_1CoAd_2Panel_template"
+      payload: "https://drive.google.com/file/d/134N9lJ_tN876bu_FAQ4CWGoHoVHRUC21/view"
+    - title: "TitlePage_1Ad_2Panels_template"
+      payload: "https://drive.google.com/file/d/133jsQZhG82s7cHxhZW0dACPHzTdqJ0WA/view"
+    - title: "TitlePage_1Ad_3Panels_template"
+      payload: "https://drive.google.com/file/d/13-Uca134C021qStkHE0PZY974X_Wn_pn/view"
+
+  utter_application_present_proposal_template:
+  - text: "Chosse below what Application to Present Proposal Manuscript you needed: "
+    buttons:
+    - title: "Application to Present Proposal Manuscript (1Adv-1CoAd-1Panel)"
+      payload: "https://drive.google.com/file/d/13M7jAZiFVLkJBBQyP5vfsBktgfR3f4W6/view"
+    - title: "Application to Present Proposal Manuscript (1Adv-1CoAd-2Panels)"
+      payload: "https://drive.google.com/file/d/13_rU-S51y-qFJBcuWc5wkafyZn8vfRWJ/view"
+    - title: "Application to Present Proposal Manuscript (1Adv-2Panels)"
+      payload: "https://drive.google.com/file/d/13cagYtItJ2bvCwMu0nGwfK7tD9svwodk/view"
+    - title: "Application to Present Proposal Manuscript (1Adv-3Panels)"
+      payload: "https://drive.google.com/file/d/13fluMkv4LUhG9L__lW8HNwrWuMWbyVV0/view"
+      
+  utter_form21a:
+  - text: "Choose below what Form21a you needed: "
+    buttons:
+    - title: "Form21a (1Adv-1CoAd-1Panel)"
+      payload: "https://drive.google.com/file/d/13lbbLRQu1UTKJcW3VCuldx2iwLrBJ0OO/view"
+    - title: "Form21a (1Adv-1CoAd-2Panels)"
+      payload: "https://drive.google.com/file/d/14-Fxma2zAC4uKh2DaG-h4AMTptfyYWZG/view"
+    - title: "Form21a (1Adv-2Panels)"
+      payload: "https://drive.google.com/file/d/13u9NeaTHoE5mGAMG3YLbHkeAvAUMEZ39/view"
+    - title: "Form21a (1Adv-3Panels)"
+      payload: "https://drive.google.com/file/d/1484yc-N19sumPwkOqVMBsXWfsX9z92NC/view"
+  utter_proposal_template:
+  - text: "Here is the file for proposal template: https://drive.google.com/file/d/12qce1WsJUoGFLuBWdKDbgkNXv0xQRnmC/view"
+
+  utter_guidelines_thesis_defense_application_and_submission:
+  - text: "Here is the file for guidelines thesis defense application and submission: https://drive.google.com/file/d/12y3wrocDk90fKbT7JNTUV9E4ja43D7ZX/view"

@@ -1,0 +1,144 @@
+version: "3.1"
+nlu:
+# - intent: ask_number_adviser_panel_coadviser
+#   examples: |
+#     - How many advisers do I need for my thesis?
+#     - How many co-advisers do I need for my thesis?
+#     - How much panel members do I need for my thesis?
+#     - How many advisers can i have for my proposal?
+#     - How many co-advisers can i have for my proposal?
+#     - How many panel members can i have for my proposal?
+#     - Is there maximum panel members for my thesis?
+#     - Is there maximum panel members for my proposal?
+#     - How many panelist can i have for my thesis?
+#     - How many panelist can i have for my proposal?
+#     - How many coad can i have for my thesis?
+#     - how many ad and coad can i have for my thesis?
+#     - how many coad and panel can i have for my thesis?
+#     - how many ad and panel can i have for my thesis?
+
+- intent: manuscript_template
+  examples: | 
+    - I need the body for manuscript template
+    - Can you provide me the manuscript template?
+    - I need the manuscript template for my research
+    - Can you give me the template for manuscript?
+    - Do you have template for manuscript
+    - I need the template for manuscript
+    - Can you provide me the template for manuscript
+    - I need the template manuscript for my research
+    - I need the template for body of manuscript
+    - Can you provide me the template for body of manuscript
+    - I need the template for body of manuscript for my research
+    - Can you give me the template for body of manuscript
+
+
+- intent: title_page_templage
+  examples: | 
+    - I need the title page template for manuscript
+    - Can you provide me the title page template?
+    - I need the title page template for my research
+    - Do you have template for title page
+    - I need the template for title page
+    - Can you provide me the template for title page
+    - I need the template title page for my research
+    - I need the template for title page for manuscript
+    - Can you give me the template for title page that has 1 ad, 1 co-ad, and 1 panel?
+    - I need the template for title page that has 1 ad, 1 co-ad, and 1 panel
+    - Can you provide me the template for title page that has 1 ad, 1 co-ad, and 1 panel
+    - I need the template for title page that has 1 adviser, 1 co-adviser, and 1 panel member?
+    - Can you provide me the template for title page that has 1 adviser, 1 co-adviser, and 1 panel member?
+    - I need the template for title page that has 1 adviser, 1 co-adviser, and 2 panel member?
+    - Can you provide me the template for title page that has 1 adviser, 1 co-adviser, and 2 panel member?
+    - I need the template for title page that has 1 adviser, 1 co-adviser, and 3 panel member?
+    - Can you provide me the template for title page that has 1 adviser, 1 co-adviser, and 3 panel member?
+    - I need the template for tlite page that has 1 ad, 1 coad, and 3 panel?
+    - Can you provide me the template for title page that has 1 ad, 1 coad, and 3 panel?
+    - I need the template for titl page that has 1 ad, 1 coad, and 2 panel?
+    - Can you provide me the template for title page for manuscorpt that has 1 ad, 1 coad, and 2 panel?
+    - I need the template for title page for manuscript that has 1 ad, 1 coad, and 1 panel?
+
+  
+- intent: application_present_proposal_template
+  examples: | 
+    - I need the application for present proposal template
+    - Can you provide me the application for present proposal template?
+    - Can you give me the template for application for present proposal?
+    - Do you have template for application for present proposal
+    - I need the template for application for present proposal
+    - Can you provide me the template for application for present proposal
+    - I need the template application for present proposal for my research
+    - I need the template for application to present proposal manuscript
+    - Can you provide me the template for application to present proposal manuscript?
+    - Give me templte to present proposal manuscript that has 1 adviser, 1 co-adviser, and 1 Panel member
+    - Can you give me the template for application to present proposal manuscript that has 1 ad, 1 co-ad, and 1 panel?
+    - I need the template for application to present proposal manuscript that has 1 ad, 1 co-ad, and 1 panel
+    - Can you provide me the template for application to present proposal manuscript that has 1 ad, 1 co-ad, and 1 panel
+    - I need the template for application to present proposal manuscript that has 1 adviser, 1 co-adviser, and 1 panel member?
+    - Could you please provide me with the application template for a proposal manuscript that includes one panel, one ad, and one co-ad?
+    - I require the application template in order to submit a proposal manuscript with one panel, one ad, and one co-ad.
+    - Could you please send me the proposal manuscript application template with one panel, one ad, and one co-ad?
+    - I require the application template in order to submit a proposal manuscript with one adviser, one co-adviser, and one panelist.
+    - Could you please send me the application template for presenting a proposal manuscript with one adviser, one co-adviser, and one panelist?
+    - provide me the template for application to present proposal manuscript that has 1 ad, 1 coad, and 3 panel?
+    - I need application to present proposal manuscript that has 1 ad, 1 coad, and 2 panel?
+    - Can you provide me application to present proposal manuscript that has 1 ad, 1 coad, and 2 panel?
+    - I need the template to present proposal manuscript that has 1 ad, 1 coad, and 1 panel?
+
+- intent: form21a
+  examples: | 
+    - I need the form 21a for my thesis?
+    - Can you provide me the form 21a?
+    - I need the form 21a for my research
+    - Can you give me the form 21a?
+    - Do you have form 21a?
+    - I need the 21a form
+    - Can you provide me the form 21a
+    - I need the form 21a for my research
+    - Please provide me with 21a form
+    - 21a form?
+    - Could you please provide me with the form 21a?
+    - 21a form is what i need
+    - Can you provide me the 21a form?
+
+- intent: proposal_template
+  examples: | 
+    - I need the proposal template
+    - Can you provide me the proposal template?
+    - I need the proposal template for my research
+    - Can you give me the template for thesis proposal?
+    - Do you have thesis proposal template?
+    - I need the proposal template
+    - I need the thesis template proposal
+    - Can you provide me the thesis template proposal?
+    - Can you provide me the template for proposal
+    - I need the template proposal for my research
+    - I need the template for proposal
+    - proposal template?
+    - template for proposal can you give?
+    - can you provide template for proposal?
+
+- intent: guidelines_thesis_defense_application_and_submission
+  examples: | 
+    - I need the guidelines for thesis defense application and submission
+    - Can you provide me the guidelines for thesis defense application and submission?
+    - I need the guidelines for thesis defense application and submission for my research
+    - Can you give me the guidelines for thesis defense application and submission?
+    - Do you have guidelines for thesis defense application and submission?
+    - I need the guidelines for thesis defense application and submission
+    - Can you provide me the guidelines for thesis defense application and submission
+    - I need the guidelines for thesis defense application and submission for my research
+    - I need guidelines for thesis submission
+    - Can you provide me the guidelines for thesis submission?
+    - I need the guidelines for thesis submission
+    - Can you give me the guidelines for thesis defense?
+    - Do you have guidelines for thesis defense?
+    - I need the guidelines for thesis defense
+    - Can you provide me the guidelines for thesis defense application?
+    - I need the application guidelines for thesis defense
+    - Can you provide application thesis defense guidelines?
+    - I need the guidelines for thesis defense application
+    - I need application guidelines for thesis defense and submission
+    - I need application for submission guidelines
+    - Can you provide me the application for thesis defense submission?
+    - I need the application for thesis defense submission

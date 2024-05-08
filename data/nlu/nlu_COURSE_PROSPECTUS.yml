@@ -1,0 +1,154 @@
+version: "3.1"
+nlu:
+
+- intent: BSAMAT_prospectus
+  examples: |
+    - What are the [prerequisite subjects](subject) of [BS Applied Mathematics](bsam_program)?
+    - What [free electives](subject) are available in [BS Applied Mathematics](bsam_program)?
+    - What [subjects](subject) are available in the first semester of [BSAMAT](bsam_program)?
+    - What [subjects](subject) are can i take in second semester of [BS Applied Mathematics](bsam_program)?
+    - What [subjects](subject) will I take in third year of [BSAMAT](bsam_program)?
+    - What are the [minor subjects](subject) in [BSAMAT](bsam_program)?
+    - What are the [major subjects](subject) in [BSAMAT](bsam_program)?
+    - What are the [elective subjects](subject) offered in [BS Applied Mathematics](bsam_program)?
+    - What is the [total units needed](subject) for [BSAMAT](bsam_program)?
+    - Course prospectus of [AMAT](bsam_program)?
+
+- intent: BSCS_prospectus
+  examples: |
+    - What are the [prerequisite subjects](subject) of [BS Computer Science](bscs_program)?
+    - What [free electives](subject) are available in [comsci](bscs_program)?
+    - What [subjects](subject) are available in the first semester of [computer science](bscs_program)?
+    - What [subjects](subject) are can i take in second semester of [kosmsay](bscs_program)?
+    - What [subjects](subject) will I take in third year of [BSCS](bscs_program)?
+    - What are the [minor subjects](subject) in [BSCS](bscs_program)?
+    - What are the [major subjects](subject) in [BSCS](bscs_program)?
+    - What are the [elective subjects](subject) offered in [BS Computer Science](bscs_program)?
+    - What is the [total units needed](subject) for [BSCS](bscs_program)?
+    - Course prospectus of [CS](bscs_program)?
+
+- intent: BSBIO_prospectus
+  examples: |
+    - What are the [prerequisite subjects](subject) of [BS Biology](bsbio_program)?
+    - What [free electives](subject) are available in [BS Biology](bsbio_program)?
+    - What [subjects](subject) are available in the first semester of [BSBIO](bsbio_program)?
+    - What [subjects](subject) are can i take in second semester of [BS Biology](bsbio_program)?
+    - What [subjects](subject) will I take in third year of [bs bio](bsbio_program)?
+    - What are the [minor subjects](subject) in [bio](bsbio_program)?
+    - What are the [major subjects](subject) in [BSBIO](bsbio_program)?
+    - What are the [elective subjects](subject) offered in [BS Biology](bsbio_program)?
+    - What is the [total units needed](subject) for [BSBIO](bsbio_program)?
+    - Course prospectus of [BIO](bsbio_program)?
+
+- intent: BSDS_prospectus
+  examples: |
+    - What are the [prerequisite subjects](subject) of [BS Data Science](bsds_program)?
+    - What [free electives](subject) are available in [BS Data Science](bsds_program)?
+    - What [subjects](subject) are available in the first semester of [BSDS](bsds_program)?
+    - What [subjects](subject) are can i take in second semester of [BS Data Science](bsds_program)?
+    - What [subjects](subject) will I take in third year of [BSDS](bsds_program)?
+    - What are the [minor subjects](subject) in [bsds](bsds_program)?
+    - What are the [major subjects](subject) in [data science](bsds_program)?
+    - What are the [elective subjects](subject) offered in [BS Data Science](bsds_program)?
+    - What is the [total units needed](subject) for [data sci](bsds_program)?
+    - Course prospectus of [DS](bsds_program)?
+
+- intent: BSFT_prospectus
+  examples: |
+    - What are the [prerequisite subjects](subject) of [BS Food Technology](bsft_program)?
+    - What [free electives](subject) are available in [food tech](bsft_program)?
+    - What [subjects](subject) are available in the first semester of [fudtek](bsft_program)?
+    - What [subjects](subject) are can i take in second semester of [ft](bsft_program)?
+    - What [subjects](subject) will I take in third year of [BSFT](bsft_program)?
+    - What are the [minor subjects](subject) in [BSFT](bsft_program)?
+    - What are the [major subjects](subject) in [BSFT](bsft_program)?
+    - What are the [elective subjects](subject) offered in [BS Food Technology](bsft_program)?
+    - What is the [total units needed](subject) for [BSFT](bsft_program)?
+    - Course prospectus of [FT](bsft_program)?
+
+
+- intent: MSFS_prospectus
+  examples: |
+    - What are the [prerequisite subjects](subject) of [Food Science](msfs_program)?
+    - What [free electives](subject) are available in [foodsci](msfs_program)?
+    - What [subjects](subject) are available in the first semester of [food science](msfs_program)?
+    - What [subjects](subject) are can i take in second semester of [Food Science](msfs_program)?
+    - What [subjects](subject) will I take in third year of [master in food science](msfs_program)?
+    - What are the [minor subjects](subject) in [MSFS](msfs_program)?
+    - What are the [major subjects](subject) in [MSFS](msfs_program)?
+    - What are the [elective subjects](subject) offered in [Food Science](msfs_program)?
+    - What is the [total units needed](subject) for [MSFS](msfs_program)? 
+    - Course prospectus of [FS](msfs_program)?
+    
+# - synonym: BSAM
+#   examples: |
+#     - BSAM
+#     - Bachelor of Science in Applied Mathematics
+#     - Applied Mathematics
+#     - BS in Applied Mathematics
+#     - AMAT
+#     - amat
+#     - bsam
+#     - bs amat
+#     - bsamath
+
+# - synonym: BSBIO
+#   examples: |
+#     - BS Biology
+#     - Bachelor of Science in Biology
+#     - Biology
+#     - BS in Biology
+#     - Bio
+#     - bio
+#     - bsbio
+
+# - synonym: BSCS
+#   examples: |
+#     - BS Computer Science
+#     - Bachelor of Science in Computer Science
+#     - Computer Science
+#     - BS in Computer Science
+#     - comsci
+#     - computer sci
+#     - cs
+#     - komsay
+#     - bscs
+
+# - synonym: BSFT
+#   examples: |
+#     - BS Food Technology
+#     - Bachelor of Science in Food Technology
+#     - Food Technology
+#     - BS in Food Technology
+#     - ft
+#     - food tech
+#     - foodtech
+#     - fudtek
+#     - bsft
+#     - foodtek
+    
+# - synonym: BSDS
+#   examples: |
+#     - BS Data Science
+#     - Bachelor of Science in Data Science
+#     - Data Science
+#     - BS in Data Science
+#     - ds
+#     - data sci
+#     - data science
+#     - BS Data Science
+#     - bsds
+
+# - synonym: MSFS
+#   examples: |
+#     - MS Food Science
+#     - Master of Science in Food Science
+#     - Food Science
+#     - MS in Food Science
+#     - fs
+#     - food sci
+#     - food science
+#     - MS Food Science
+#     - master in food science
+#     - food science masteral
+#     - masteral in food science

@@ -1,0 +1,343 @@
+#DOMAIN RESPONSES ARE NOT YET FILLED
+
+version: '3.1'
+intents:
+- inquire_academic_programs
+- academic_year_division
+- course_numbering_system
+- unit_credit_definition
+- registration_process
+- maximum_academic_load
+- matriculation_change_process
+- cross_registration_policy
+- attendance_policy
+- excessive_absences_policy
+- course_dropping_process
+- leave_of_absence_policy
+- grading_system
+# - removal_of_incomplete_grade_and_4.0_policy
+- 4.0_grade_policy
+- honorific_scholarship
+- scholastic_delinquency
+- maximum_residency_rule
+- honorable_dismissal
+- retention_policy_bsam
+- retention_policy_bsbio
+- retention_policy_bscs
+- retention_policy_bsft
+- retention_policy_bsds
+- retention_policy_msfs
+- waiver_of_prerequisite_explanation
+- graduation_requirements
+- graduation_with_honors
+- commencement_exercises
+
+# entities:
+# - bsbio_program
+# - bscs_program
+# - bsft_program
+# - bsds_program
+# - msfs_program
+# - ocs_ent
+
+responses:
+  utter_inquire_academic_programs:
+  - text: 
+      "Academic Programs Offered in College of Science and Mathematics (CSM) <br>
+
+      - Bachelor of Science in Applied Mathematics <br>
+      - Bachelor of Science in Biology <br>
+      - Bachelor of Science in Computer Science <br>
+      - Bachelor of Science in Data Science <br>
+      - Bachelor of Science in Food Technology <br>
+      - Master of Science in Food Science  <br>"
+#you may also click what course in the list to view the prospectus of the program you are interested in.
+
+  utter_academic_year_division: #not summarized
+  - text: "The Academic Year is divided into two semesters of at least 16 weeks
+        each, exclusive of registration, and final examination periods. <br>A midyear session
+        of 6 weeks follows the second semester. Class work in the midyear session shall
+        be equivalent to class work in one semester.<br>
+        All academic units of the university operate under the semestral
+        system. The semester usually begins in August, the second semester in January,
+        and the midyear session in June.
+        "
+  utter_course_numbering_system: #not summarized
+  - text: "In general, courses in the lower divisions (i.e., freshman and sophomore
+        years) are numbered 1 to 99; courses in the upper divisions (i.e., junior and
+        senior years) are numbered 100 to 200; and graduate courses are numbered
+        201 to 400. Courses numbered 201 to 300 are generally master programs, 301
+        and above are generally professional courses in the doctoral program.
+        "
+  utter_unit_credit_definition: #not summarized
+  - text: "The unit credit is the semester hour. Most classes taught at the
+      University meet three hours a week; these classes carry 48-50 clock hours of
+      instruction and 3 units of credit. <br> Each unit of credit is at least 16 semester hours
+      of instruction. In the form of lecture, discussion, seminar, tutorial, or recitation or
+      in any combination of these forms within a semester.
+      "
+  utter_registration_process: #not summarized
+  - text: "Students are responsible for fulfilling all their requirements of the
+        curriculum in which they are enrolled. They should consult with their adviser,
+        College Secretary or the University Registrar in planning their course work.
+        A student must be officially registered in order to receive credit for
+        course work. The official registration form (UP Form 5) which is a record of
+        classes for which the student has enrolled is filed in the Offices of the College
+        Secretary and University Registrar.
+        "
+  utter_maximum_academic_load:
+  - text: "
+      Undergraduate students are typically limited to <b>18 non-laboratory units or 21 units</b>, including laboratory work, per semester. <br> 
+      Exceptions may be made for graduating students with exceptional academic records or for courses approved by the University Council and the Board of Regents.<br>
+      During the midyear term, the normal load is 6 units, but the Dean may permit up to 9 units in certain cases. <br> Additionally, students employed outside the university may have their academic load restricted by the Dean or Director, with full-time graduate students generally limited to 10 units per semester without prior approval.
+
+      "
+  utter_matriculation_change_process: #not summarized
+  - text: "All transfers to other classes shall be made only for valid reasons. No
+        change of matriculation involving the taking of a new subject shall be allowed
+        after one week of regular class meetings has been held. Changes in matriculation
+        shall be effected by means of the form for the change of matriculation and must
+        be recommended by the adviser and approved by the Dean.
+        "
+  utter_cross_registration_policy:
+  - text: "
+        <b>Within the University</b><br>
+        students need permission from their Dean or Director to register in another college, school, or department. Cross-registration within the University requires filling out a form (UP Form 5B), and the total units must adhere to academic load rules. <br>
+
+        <b> Students from other institutions </b><br> to register at UP, they need written permits from their institution's Dean, Director, or Registrar. The permit specifies the total units and authorized subjects. <br>
+
+        <b>Courses taken in another institution/university </b><br> UP doesn't grant credit for courses taken in another institution/university without explicit written authorization from the Vice-Chancellor for Academic Affairs, based on the Dean's recommendation.
+        "
+  utter_attendance_policy: #not summarized
+  - text: "Any student who, for unavoidable cause, absents himself from class
+      must obtain an excuse slip from the Dean to be presented to the instructor
+      concerned not later than the second class session following the student’s return.
+      In addition, in case the absence is due to illness, a certificate must be secured
+      from the Nurse on Duty in the UP Mindanao campus or from the proper medical
+      offices in units outside UP Mindanao.
+      Excuses are for the time missed only. All work covered by the class
+      during the absence shall be made up to the satisfaction of the instructor within
+      a reasonable time from the date of absence.
+      "
+#if you want the excuse slip form, you may click the button below:
+
+  utter_excessive_absences_policy:
+  - text: "Students are automatically dropped from a subject 
+            if their absences reach 20% of the total class hours. <br>
+            The number of allowed absences varies based on the frequency of 
+            class meetings: <br>
+            a) 3 meetings per week = 10 absences <br>
+          b) 2 meetings per week = 7 absences <br>
+          c) 1 meeting per week = 4 absences <br>
+
+            However, faculty members may set longer attendance requirements as needed for their courses, provided they inform the students.
+
+          If the majority of absences are excused, students receive a grade of DRP instead of a failing grade of 5.00. Conversely, if most absences are unexcused, a grade of 5.00 is given. Late enrollment time is considered as time lost due to absence.
+
+          "
+  utter_course_dropping_process: #not summarized
+  - text: "A student may, with the consent of his instructor and the Dean,
+          drop a subject by filling out the prescribed UP Form 26 before ¾ of the hours
+          prescribed for the semester/trimester/quarter term have elapsed, and not later.
+          Any student who drops a course without the approval of the Dean shall have his
+          registration privileges curtailed or entirely withdrawn. If a subject is dropped
+          after the middle of the semester, the faculty member concerned shall indicate
+          the date and the class standing of the student at the time of dropping as either
+          Passing or Failing, solely for administrative guidance.
+          "
+  utter_leave_of_absence_policy:
+  - text: "Students at the University of the Philippines can request a leave of absence by submitting a written petition to the Dean, stating the reason for the leave and specifying its duration. The leave typically should not exceed one year but may be renewed for up to another year. However, the aggregate leave of absence should not exceed two years if not utilized in two successive years. If a student needs a leave beyond this period, they may be advised to apply for an honorable dismissal without prejudice to readmission.
+
+        In cases where a student withdraws after completing three-fourths of the total course hours and their class standing is below 3.0, instructors may submit grades of 5.0. Withdrawal from a college or school without formal leave of absence can result in curtailed or withdrawn registration privileges.
+        "
+  utter_grading_system:
+  - text: "The University of the Philippines follows a grading system that includes the following scale: <br>
+
+          1.0: Excellent <br>
+          1.5: Very Good <br>
+          2.0: Good <br>
+          2.5: Satisfactory <br>
+          3.0: Pass <br> 
+          4.0: Conditional <br>
+          5.0: Fail <br>
+          INC: Incomplete <br>
+          Additionally, grades such as 1.25, 1.75, 2.25, and 2.75 may be given but are not more detailed than multiples of 0.25. <br>"
+
+        
+
+  utter_4.0_grade_policy:
+  -text: "  A grade of 4.0 indicates conditional failure, which can be addressed by repeating the course successfully or passing a re-examination. If the student passes the re-examination, the grade is changed to 3.0; otherwise, it becomes a 5.0. Only one re-examination is allowed within one academic year from when the 4.0 grade was received.
+
+          If a student fails to remove the 4.0 grade within the prescribed time, credit for the course can only be earned by repeating and passing it.
+
+          The grade of INC is given to students who fail to take the final examination or complete other course requirements due to valid reasons like illness. Students with a passing class standing who fail to take the final exam receive a grade of 5.0. Removal of the deficiency must be completed within the prescribed time through passing an examination or meeting all course requirements.
+          "
+      
+#   utter_4.0_grade_policy:
+#   - text: "1) A grade of 4.0 can be removed ONLY by a removal examination taken
+#           within the prescribed time of one (1) academic year. If a student passes
+#           the re-examination, a grade of 3.0 is given, otherwise, a 5.0. Only one
+#           (1) re-examination is allowed. <br>
+#           2) A grade of 4.0 shall appear in the Official Transcript of Records. For the
+#           computation of weighted average, the grade of 4.0 is counted until it is
+#           removed, which means that it shall be excluded from the computation
+#           once removed. Therefore, once removed, only the final grade of 3.0 or
+#           5.0 is counted but the grade of 4.0 remains in the Transcript. <br>
+#           3) A grade of 4.0 shall be converted to grade of 5.0 if the student does
+#           not remove the 4.0 within the prescribed one-year period through reexamination or if the student does not re-enroll within that year. The
+#           faculty member concerned, upon being informed by the University
+#           Registrar that the prescribed period has lapsed will submit the Report
+#           of Grade indicating the grade of 5.0. If the faculty member is unable
+#           to make the report, the Department Chair will do so in his/her behalf.
+#           To compute weighted average, the 4.0 is included until the one-year
+#           prescription period is over. After the period has lapsed, the grade of
+#           5.0 of the grade when the subject is re-enrolled is included. <br>
+#           4) If a student does not remove the grade of 4.0 within the prescribed
+#           time (which means that the 4.0 becomes a 5.0), credit may still be
+#           earned by repeating and passing the subject. <br>
+#           5) If a student re-enrolls in the course within one (1) year after s/he
+#           obtained a grade of 4.0, the grade of 4.0 shall remain a 4.0 (i.e., grade
+#           of 4.0 shall not be removed; shall be included in the computation
+#           of grade averages). It shall not be converted to a 5.0 even after the
+#           prescribed one (1) year period.
+#           To compute weighted average, the grade of 4.0 and the grade when
+#           the subject is re-enrolled shall be included.
+#           "
+  utter_honorific_scholarship: #not summarized
+  - text: "
+        <b>UNIVERSITY SCHOLAR</b><br>
+        Any undergraduate or graduate student, who obtains at the end of the
+        semester a weighted average of 1.45 or better, or 1.25 or better, respectively,
+        is given these honorific scholarships. University scholars are listed in the
+        Chancellor’s List of Scholars. <br>
+
+        <b>COLLEGE SCHOLAR</b><br>
+        Any undergraduate or graduate student who, not being classed as
+        University scholar, obtains at the end of the semester a weighted average of,
+        1.75 or better; respectively, is given this honorific scholarship. College scholars
+        are listed in the Dean’s List of Scholars. <br>
+        In addition to the general weighted average prescribed, a student
+        must have taken during the previous semester at least 15 units of academic
+        credit or the normal load prescribed (in the case of graduate students, not
+        less than 8 units); and must have no grade below 3.0 in any academic or nonacademic subject.
+        "
+  utter_scholastic_delinquency:
+  - text: "
+          The faculty of each college or school shall approve suitable and
+        effective provisions governing undergraduate delinquent students, subject to
+        the following minimum standards: <br>
+
+        <b>WARNING:</b><br> Students at UP are issued a warning if they receive final grades below 3.0 in 25% to 49% of their total registered academic units. <br>
+
+        <b>PROBATION:</b><br>Students are placed on probation if they obtain final grades below 3.0 in 50% to 75% of their total academic units. Their course load for the succeeding semester is limited, and probation can be removed by achieving grades of 3.0 or better in more than 50% of their units. <br>
+
+        <b>DISMISSAL:</b>,br> Students face dismissal if they receive final grades below 3.0 in more than 75% but less than 100% of their total academic units. They are dropped from the rolls of their college or school. <br>
+
+        <b>PERMANENT DISQUALIFICATION:</b><br> Students who receive final grades below 3.0 in 100% of their academic units are permanently barred from readmission to any college of the University. However, exceptions may be made for cases of unauthorized dropping of subjects, subject to faculty recommendation and evaluation by the Vice Chancellor for Student Affairs. <br>
+        "
+  utter_maximum_residency_rule:
+  - text: "A student must finish the requirements of a course of any college
+        within a period of actual residence equivalent to 1 ½ times the normal length
+        prescribed for the course, otherwise s/he shall not be allowed to register further
+        in that college. <br>
+        <b>Students on Leave of Absence (LOA) </b>are considered not in residence;
+        hence, LOAs are not counted in determining maximum residence. <br> <b>Absence
+        Without Leave (AWOL)</b>, however, shall be counted towards a student’s MRR.
+        Waiver of MRR is delegated to the Chancellor.<br>
+        This rule shall not apply to graduate students who are covered by
+        specific rules or to students governed by existing rules regarding a maximum
+        period.
+        "
+  utter_honorable_dismissal:
+  - text: "
+        An honorable dismissal at UP is granted to 
+        students who voluntarily sever their connection 
+        with the University in good standing. To obtain 
+        honorable dismissal, a student must submit a written 
+        petition, signed by a parent or guardian, to the University 
+        Registrar. Once granted, the student's record reflects 
+        their withdrawal in good standing, contingent 
+        upon settling any outstanding debts to the University.
+        However, if a student is expelled due to disciplinary 
+        action, they may still request an academic transcript 
+        without reference to Dishonorable Dismissal under specific conditions, including a period of good behavior and Board of Regents approval. This policy ensures a formal process for students to leave the University with integrity and transparency.
+        "
+  utter_bsam_retention_policy:
+  - text: "Retention Policy can be seen in the course prospectus of BS Applied Mathematics"
+  
+  utter_bsbio_retention_policy:
+  - text: "Retention Policy can be seen in the course prospectus of BS Biology"
+  
+  utter_bscs_retention_policy:
+  - text: "Retention Policy can be seen in the course prospectus of BS Computer Science"
+  
+  utter_bsft_retention_policy:
+  - text: "Retention Policy can be seen in the course prospectus of BS Food Technology"
+ 
+  utter_bsds_retention_policy:
+  - text: "Retention Policy can be seen in the course prospectus of BS Data Science"
+  
+  utter_msfs_retention_policy:
+  - text: "Retention Policy can be seen in the course prospectus of MS Food Science"
+ 
+  utter_waiver_of_prerequisite_explanation:
+  - text: "
+            To request a waiver of a course prerequisite at UP, a student 
+            must submit an application accompanied by a certification 
+            from their prerequisite course instructor confirming full
+            attendance. Additionally, the application requires a 
+            certification from the Director of Student Affairs 
+            verifying that the student's failure to pass the 
+            prerequisite course wasn't due to disciplinary action. 
+            Each college assesses waiver requests through a Dean's 
+            committee, which evaluates the application's merit. 
+            If granted, the student must enroll in the 
+            prerequisite course simultaneously or in the next semester. 
+            This process ensures fair consideration of waiver requests 
+            while maintaining academic standards.
+            "
+  utter_graduation_requirements:
+  - text: "The graduation requirements at the University of the Philippines (UP) include: <br>
+            <ol>
+            <li>Completion of all academic and other requirements prescribed for graduation.</li>
+            <li>Candidates for graduation who began their studies under a curriculum more than 10 years old are governed by specific rules.
+              <ul>
+              <li>Those who completed all requirements but did not apply for the corresponding degree are approved for graduation retroactively.</li>
+              <li>Those who completed all but two or three subjects required by a curriculum may follow any enforced curriculum from their first attendance.</li>
+              </ul>
+            </li>
+            <li>Each Dean or their authorized representative certifies candidates for graduation three weeks after the opening of classes.</li>
+            <li>The University Registrar, with consultation from relevant department chairmen, reviews the academic record of each candidate.</li>
+            <li>A complete list of qualified candidates for graduation is published ten weeks before the end of a semester.</li>
+            <li>All candidates must clear deficiencies and records five weeks before the end of their last semester.</li>
+            <li>Graduation requires at least one year of residence work, immediately prior to graduation.</li>
+            <li>Failure to pay the required graduation fee within the specified period results in no conferral of title or degree.</li>
+            <li>Formal application as candidates for graduation must be filed with the respective college Deans' offices.</li>
+            </ol>"
+  utter_graduation_with_honors:
+  - text: "To graduate with honors at the University of the Philippines (UP), students must achieve specific minimum weighted average grades. These grades determine the level of honors conferred upon graduation. The minimum weighted average grades required for different levels of honors are as follows: <br>
+
+          - Summa cum laude: 1.20 <br>
+          - Magna cum laude: 1.45 <br>
+          - Cum laude: 1.75 <br>
+          All grades obtained in subjects prescribed by the curriculum, including elective subjects, are considered in calculating the weighted average grade. In cases where students take more electives than required, a specific procedure is followed to select which electives contribute to the calculation: <br>
+
+          For students who did not shift programs, electives are considered in chronological order. <br>
+          For students who shifted programs, electives are selected based on priority: <br>
+          a) Electives taken in the graduating program are considered first, in chronological order.
+          b) Electives taken in the previous program and accepted as electives in the current program follow, also in chronological order. <br>
+          Prescribed courses taken in the previous program but qualifying as electives in the current program are considered last, in chronological order.
+          This process ensures that students who meet the academic criteria receive honors according to their performance throughout their academic journey at UP."
+  utter_commencement_exercises:
+  - text: "
+          The commencement exercise at UP is optional 
+          for graduating students. Those not attending must inform 
+          their deans beforehand. They can then receive their 
+          academic documents from the Registrar's Office, 
+          provided they meet specified requirements 
+          and show proof of payment and clearance. 
+          This allows flexibility in participation while ensuring 
+          timely document retrieval."
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

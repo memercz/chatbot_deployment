@@ -1,0 +1,85 @@
+version: "3.1"
+nlu:
+
+- intent: define_bsam
+  examples: |
+    - what is BSAMAT?
+    - can you tell me what is [bsam](bsam_program)?
+    - how many years does i need to complete [bsamat](bsam_program)?
+    - explain what is [bsam] (bsam_program)
+
+- intent: define_bsbio
+  examples: |
+    - discuss what is [bsbio] (bsbio_program)
+    - can you tell me what is [bio](bsbio_program)?
+    - how many years does i need to complete [BIO](bsbio_program)?
+    - explain what is [BSBIO] (bsbio_program)
+
+- intent: define_bscs
+  examples: |
+    - discuss what is [BSCS] (bscs_program)
+    - can you tell me what is [comsci](bscs_program)?
+    - how many years does i need to complete [bscs](bscs_program)?
+
+- intent: define_bsft
+  examples: |
+    - discuss what is [BSFT] (bsft_program)
+    - can you tell me what is [ft](bsft_program)?
+    - how many years does i need to complete [bsft](bsft_program)?
+
+- intent: define_bsds
+  examples: |
+    - discuss what is [BSDS] (bsds_program)
+    - can you tell me what is [ds](bsds_program)?
+    - how many years does i need to complete [bsds](bsds_program)?
+
+- intent: define_msfs
+  examples: |
+    - explain what is [MSFS] (msfs_program)
+    - discuss what is [food sci](msfs_program)
+    - can you tell me what is [msfs](msfs_program)?
+    - how many years does i need to complete [msfs](msfs_program)?
+
+
+- intent: plo_bsam
+  examples: |
+    - what are the PLOs of [bsam](bsam_program)?
+    - can you tell me the program learning outcome of [amat](bsam_program)?
+    - what are the expected learning outcome of [bs amat](bsam_program) program?
+    - what are the learning outcome of [bsamat](bsam_program) program?
+
+- intent: plo_bsbio
+  examples: |
+    - what are the PLOs of [bs bio](bsbio_program)?
+    - can you tell me the program learning outcome of [bs biology](bsbio_program)?
+    - what are the expected learning outcome of [bio](bsbio_program) program?
+    - what are the learning outcome of [bsbio](bsbio_program) program?
+
+- intent: plo_bsft
+  examples: |
+    - what are the PLOs of [bs food tech(bsft_program)?
+    - can you tell me the program learning outcome of [food technology](bsft_program)?
+    - what are the expected learning outcome of [fudtek](bsft_program) program?
+    - what are the learning outcome of [BSFT](bsft_program) program?
+
+- intent: plo_bsds
+  examples: |
+    - what are the PLOs of [BSDS](bsds_program)?
+    - can you tell me the program learning outcome of [BS Data Science](bsds_program)?
+    - what are the expected learning outcome of [ds](bsds_program) program?
+    - what are the learning outcome of [data science](bsds_program) program?
+
+- intent: plo_msfs
+  examples: |
+    - what are the PLOs of [MSFS](msfs_program)?
+    - can you tell me the program learning outcome of [ms Food science](msfs_program)?
+    - what are the expected learning outcome of [fs](msfs_program) program?
+    - what are the learning outcome of [Food science](msfs_program) program?
+  
+- intent: plo_bscs
+  examples: |
+    - what are the PLOs of [comsci](bscs_program)?
+    - can you tell me the program learning outcome of [komsay](bscs_program)?
+    - what are the expected learning outcome of [BSCS](bscs_program) program?
+    - what are the learning outcome of [bscs](bscs_program) program?
+  

@@ -1,0 +1,33 @@
+version: "3.1"
+
+stories:
+
+- story: give manuscript template
+  steps:
+  - intent: manuscript_template
+  - action: utter_manuscript_template
+
+- story: give title page template
+  steps:
+  - intent: title_page_templage
+  - action: utter_title_page_template
+
+- story: give application present proposal template
+  steps:
+  - intent: application_present_proposal_template
+  - action: utter_application_present_proposal_template
+
+- story: give form21a
+  steps:
+  - intent: form21a
+  - action: utter_form21a
+
+- story: give proposal template
+  steps:
+  - intent: proposal_template
+  - action: utter_proposal_template
+
+- story: give guidelines thesis defense application and submission
+  steps:
+  - intent: guidelines_thesis_defense_application_and_submission
+  - action: utter_guidelines_thesis_defense_application_and_submission

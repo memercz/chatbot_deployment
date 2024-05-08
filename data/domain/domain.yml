@@ -1,0 +1,104 @@
+version: '3.1'
+intents:
+#- academic_year_division
+- affirm
+# - ask_commencement_exercises
+# - ask_graduation_requirements
+# - ask_honorable_dismissal
+# - ask_maximum_residency_rule
+# - ask_retention_policy
+# - ask_waiver_of_prerequisites
+# - attendance_policy
+- bot_challenge
+# - course_dropping_process
+# - course_numbering_system
+# - cross_registration_policy
+- deny
+#- excessive_absences_policy
+- goodbye
+- greet
+# - inquire_academic_programs
+# - leave_of_absence_policy
+# - matriculation_change_process
+# - maximum_academic_load
+- mood_great
+- mood_unhappy
+# - proposal_template
+# - registration_process
+# - unit_credit_definition
+# - LOA_application
+# - application_graduation
+# - application_overload_underload
+# - application_shifting
+# #####
+# - inquire_time
+- out_of_scope
+
+entities:
+- bsbio_program
+- bscs_program
+- bsft_program
+- bsds_program
+- msfs_program
+- ocs_ent
+- subject
+
+slots:
+  subject:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: subject
+
+responses:
+  utter_greet:
+  - text: Hey! How are you?
+  utter_cheer_up:
+  - text: 'Mao naniasdasdas:'
+    image: https://i.imgur.com/ZXuI5ze.jpeg
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+
+  utter_out_of_scope:
+  - text: Sorry, I'm not sure how to help with that.
+
+#  # NLU FALLBACK
+#   utter_please_rephrase:
+#   - text: I'm sorry, I didn't quite understand that (still a baby bot). Could you rephrase? 
+
+  #Handling Low confidence
+  utter_default:
+  - text: Sorry I didn't get that. I'm just a lowly chatbot. Can you rephrase?
+
+  # utter_ask_rephrase: #3. Defining a fallback action (Two-Stage-Fallback)
+  # - text: I'm sorry, I didn't quite understand that. Could you rephrase?
+
+  # utter_default: #4. Defining an ultimate fallback action (Two-Stage-Fallback)
+  # - text: I'm sorry, I can't help you.
+
+  # utter_application_graduation:
+  # - text: 'Please follow this steps:'
+  #   image: "D://CMSC 200b dataset//IMAGES CSM Process Flow-Procedures//Application for Graduation.jpg"
+
+  # utter_application_overload_underload:
+  # - text: 'Please follow this steps:'
+  #   image: "D://CMSC 200b dataset//IMAGES CSM Process Flow-Procedures//Application for Overload_Underload.jpg"
+
+  # utter_application_shifting:
+  # - text: 'Please follow this steps:'
+  #   image: "D://CMSC 200b dataset//IMAGES CSM Process Flow-Procedures//Application for shifting.jpg"
+
+# actions:
+# #- action_send_proposal_template
+# - action_tell_time
+
+session_config:
+  session_expiration_time: 60 #change to 1
+  carry_over_slots_to_new_session: true

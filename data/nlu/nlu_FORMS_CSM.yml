@@ -1,0 +1,256 @@
+version: "3.1"
+nlu:
+
+
+- intent: document_graduation_application
+  examples: |
+    - I need the application form for graduation.
+    - Where can I find the graduation application PDF?
+    - Can you show me the graduation application form?
+    - I need the application form for graduation.
+    - Where can I find the graduation application PDF?
+    - Can you show me the graduation application form?
+- intent: document_overload_underload_application
+  examples: |
+    - Do you have the application for overload or underload?
+    - I need the form for applying for overload/underload.
+    - Can I download the application for overload/underload here?
+    - Do you have the application for overload or underload?
+    - I need the form for applying for overload/underload.
+    - Can I download the application for overload/underload here?
+- intent: document_residency_application
+  examples: |
+    - Where can I get the residency application form?
+    - Can you show me the residency application PDF?
+    - I'm looking for the application form for residency.
+    - Where can I get the residency application form?
+    - Can you show me the residency application PDF?
+    - I'm looking for the application form for residency.
+- intent: document_course_substitution_application
+  examples: |
+    - I need the application form for course substitution.
+    - Do you have the PDF for applying to substitute courses?
+    - Where can I find the application for substitution of courses?
+    - I need the application form for course substitution.
+    - Do you have the PDF for applying to substitute courses?
+    - Where can I find the application for substitution of courses?
+- intent: document_waiver_prerequisite_application
+  examples: |
+    - Can I download the application for waiver of prerequisite?
+    - Where can I find the form to waive a prerequisite?
+    - I need the application for a prerequisite waiver.
+    - Can I download the application for waiver of prerequisite?
+    - Where can I find the form to waive a prerequisite?
+    - I need the application for a prerequisite waiver.
+- intent: document_change_adviser_form
+  examples: |
+    - Do you have the change of adviser form?
+    - I need the form to change my adviser.
+    - Where can I find the change of adviser document?
+    - Do you have the change of adviser form?
+    - I need the form to change my adviser.
+    - Where can I find the change of adviser document?
+- intent: document_change_of_panel_form
+  examples: |
+    - Do you have the change of panel form?
+    - I need the form to change my panel.
+    - Where can I find the document for changing a panel?
+    - Do you have the change of panel form?
+    - I need the form to change my panel.
+    - Where can I find the document for changing a panel?
+- intent: document_changes_in_approved_thesis_proposal
+  examples: |
+    - I need the form for changes in my approved thesis proposal.
+    - Where can I find the document for updating an approved thesis proposal?
+    - Can you show me the form for revisions to an approved thesis proposal?
+    - I need the form for changes in my approved thesis proposal.
+    - Where can I find the document for updating an approved thesis proposal?
+    - Can you show me the form for revisions to an approved thesis proposal?
+- intent: document_dost_thesis_template
+  examples: |
+    - Where can I download the DOST thesis template?
+    - Can you provide the DOST thesis template document?
+    - I need the template for a DOST thesis.
+    - Where can I download the DOST thesis template?
+    - Can you provide the DOST thesis template document?
+    - I need the template for a DOST thesis.
+- intent: document_dropping_of_enrolled_subject
+  examples: |
+    - Do you have the form for dropping an enrolled subject?
+    - I need the document to drop a course I'm registered for.
+    - Where can I find the application for dropping a class?
+    - Do you have the form for dropping an enrolled subject?
+    - I need the document to drop a course I'm registered for.
+    - Where can I find the application for dropping a class?
+- intent: document_excuse_for_absence
+  examples: |
+    - Can I download the excuse for absence form?
+    - Where can I find the document for an excuse of absence?
+    - I need the form to submit an excuse for missing class.
+    - Can I download the excuse for absence form?
+    - Where can I find the document for an excuse of absence?
+    - I need the form to submit an excuse for missing class.
+- intent: document_leave_of_absence
+  examples: |
+    - Do you have the leave of absence application form?
+    - I need the document to apply for a leave of absence.
+    - Where can I find the application for leave of absence?
+    - Do you have the leave of absence application form?
+    - I need the document to apply for a leave of absence.
+    - Where can I find the application for leave of absence?
+- intent: document_memorandum_of_understanding
+  examples: |
+    - Can I download the memorandum of understanding form?
+    - I need the document for a memorandum of understanding with the university.
+    - Where can I find the application for an MOU with the university?
+    - Can I download the memorandum of understanding form?
+    - I need the document for a memorandum of understanding with the university.
+    - Where can I find the application for an MOU with the university?
+- intent: document_msfs_application_for_comprehensive_exam
+  examples: |
+    - Do you have the MSFS application for comprehensive exam?
+    - I need the form to apply for the MSFS comprehensive exam.
+    - Where can I find the application for the MSFS comprehensive exam?
+    - Do you have the MSFS application for comprehensive exam?
+    - I need the form to apply for the MSFS comprehensive exam.
+    - Where can I find the application for the MSFS comprehensive exam?
+- intent: document_permit_to_complete_inc_or_remove_4
+  examples: |
+    - Can I download the permit to complete an INC or remove a failing grade?
+    - I need the document for a permit to complete an incomplete grade.
+    - Where can I find the application for a permit to remove a failing grade?
+    - Can I download the permit to complete an INC or remove a failing grade?
+    - I need the document for a permit to complete an incomplete grade.
+    - Where can I find the application for a permit to remove a failing grade?
+- intent: document_request_for_change_in_final_exam_schedule
+  examples: |
+    - Do you have the form for requesting a change in the final exam schedule?
+    - I need the document to request a change in my final exam schedule.
+    - Where can I find the application for changing the final exam schedule?
+    - Do you have the form for requesting a change in the final exam schedule?
+    - I need the document to request a change in my final exam schedule.
+    - Where can I find the application for changing the final exam schedule?
+- intent: document_return_from_leave_of_absence
+  examples: |
+    - Can I download the form for returning from a leave of absence?
+    - I need the document for returning from a leave of absence.
+    - Where can I find the application for returning from a leave of absence?
+    - Can I download the form for returning from a leave of absence?
+    - I need the document for returning from a leave of absence.
+    - Where can I find the application for returning from a leave of absence?
+- intent: document_shifting_form
+  examples: |
+    - Do you have the shifting form?
+    - I need the document for shifting my program.
+    - Where can I find the shifting form?
+    - Do you have the shifting form?
+    - I need the document for shifting my program.
+    - Where can I find the shifting form?
+- intent: document_university_clearance_and_alumni_form
+  examples: |
+    - Can I download the university clearance and alumni form?
+    - I need the document for university clearance and alumni.
+    - Where can I find the form for university clearance and alumni?
+    - Can I download the university clearance and alumni form?
+    - I need the document for university clearance and alumni.
+    - Where can I find the form for university clearance and alumni?
+- intent: document_plan_of_study_bsb
+  examples: |
+    - Can I download the plan of study for [BSB](bsbio_program)?
+    - I need the document for the [Bio](bsbio_program) plan of study.
+    - Where can I find the plan of study document for [BSB](bsbio_program)?
+    - Can I download the plan of study for [BSB](bsbio_program)?
+    - I need the document for the [Bio](bsbio_program) plan of study.
+    - Where can I find the plan of study document for [BSB](bsbio_program)?
+- intent: document_plan_of_study_bsam
+  examples: |
+    - Do you have the plan of study for [BSAM](bsam_program)?
+    - I need the document for the [BSAM](bsam_program) plan of study.
+    - Where can I find the plan of study document for [BSAM](bsam_program)?
+    - Do you have the plan of study for [BSAM](bsam_program)?
+    - I need the document for the [BSAM](bsam_program) plan of study.
+    - Where can I find the plan of study document for [BSAM](bsam_program)?
+- intent: document_plan_of_study_bscs
+  examples: |
+    - Can I download the plan of study for [BSCS](bscs_program)?
+    - I need the document for the [BSCS](bscs_program) plan of study.
+    - Where can I find the plan of study document for [BSCS](bscs_program)?
+    - Can I download the plan of study for [BSCS](bscs_program)?
+    - I need the document for the [BSCS](bscs_program) plan of study.
+    - Where can I find the plan of study document for [BSCS](bscs_program)?
+- intent: document_plan_of_study_bsft
+  examples: |
+    - Do you have the plan of study for [BSFT](bsft_program)?
+    - I need the document for the [BSFT](bsft_program) plan of study.
+    - Where can I find the plan of study document for [BSFT](bsft_program)?
+    - Do you have the plan of study for [BSFT](bsft_program)?
+    - I need the document for the [BSFT](bsft_program) plan of study.
+    - Where can I find the plan of study document for [BSFT](bsft_program)?
+- intent: document_plan_of_study_msfs
+  examples: |
+    - Can I download the plan of study for [MSFS](msfs_program)?
+    - I need the document for the [MSFS](msfs_program) plan of study.
+    - Where can I find the plan of study document for [MSFS](msfs_program)?
+    - Can I download the plan of study for [MSFS](msfs_program)?
+    - I need the document for the [MSFS](msfs_program) plan of study.
+    - Where can I find the plan of study document for [MSFS](msfs_program)?
+
+
+# - synonym: BSAM
+#   examples: |
+#     - BSAM
+#     - Bachelor of Science in Applied Mathematics
+#     - Applied Mathematics
+#     - BS in Applied Mathematics
+#     - AMAT
+#     - amat
+
+# - synonym: BSBIO
+#   examples: |
+#     - BS Biology
+#     - Bachelor of Science in Biology
+#     - Biology
+#     - BS in Biology
+#     - Bio
+#     - bio
+
+# - synonym: BSCS
+#   examples: |
+#     - BS Computer Science
+#     - Bachelor of Science in Computer Science
+#     - Computer Science
+#     - BS in Computer Science
+#     - comsci
+#     - computer sci
+#     - cs
+
+# - synonym: BSFT
+#   examples: |
+#     - BS Food Technology
+#     - Bachelor of Science in Food Technology
+#     - Food Technology
+#     - BS in Food Technology
+#     - ft
+#     - food tech
+#     - foodtech
+# - synonym: BSDS
+#   examples: |
+#     - BS Data Science
+#     - Bachelor of Science in Data Science
+#     - Data Science
+#     - BS in Data Science
+#     - ds
+#     - data sci
+#     - data science
+#     - BS Data Science
+
+# - synonym: MSFS
+#   examples: |
+#     - MS Food Science
+#     - Master of Science in Food Science
+#     - Food Science
+#     - MS in Food Science
+#     - fs
+#     - food sci
+#     - food science
+#     - MS Food Science

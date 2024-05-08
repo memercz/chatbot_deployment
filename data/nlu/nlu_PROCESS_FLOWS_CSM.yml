@@ -1,0 +1,173 @@
+version: "3.1"
+nlu:
+
+- intent: add_cancel_change_mat
+  examples: |
+      - how do I add, cancel, or change a subject?
+      - how do I add, cancel, or change a subject in my matriculation?
+      - how do i addmat, cancelmat, or changemat?
+      - how do i addmat?
+      - how do i cancelmat?
+      - how do i changemat?
+      - how to add mat?
+      - how to cancel mat?
+      - how to change mat?
+      
+
+- intent: application_graduation
+  examples: |   
+    - How do I apply for graduation?
+    - What is the process for applying for graduation?
+    - How can I initiate the graduation application process?
+    - What steps do I need to follow to apply for graduation?
+    - Can you guide me through the graduation application procedure?
+    - Are there any specific requirements I need to fulfill before applying for graduation?
+    - Can I apply for graduation online, or do I need to do it in person?
+    - steps for applying graduation?
+
+- intent: application_overload_underload
+  examples: |
+    - How do I apply for an overload?
+    - How do I apply for an underload?
+    - How do I apply for an overload or underload?
+    - What is the process for applying for an overload or underload?
+    - What is the process for applying for an overload?
+    - What is the process for applying for an underload?
+  
+- intent: application_shifting
+  examples: |
+    - How do I apply for shifting?
+    - What is the process for applying for shifting?
+    - How can I request for shifting?
+    - How do I file for shifting?
+    - how to shift?
+    - shift process?
+  
+- intent: application_waiver_prerequisite
+  examples: |
+    - How do I apply for a waiver of prereq?
+    - What is the process for applying for a waiver of prerequisites?
+    - How can I request for a waiver of prerequisites?
+    - How do I file for a waiver of prerequisites?
+    - steps for applying waiver of prereq?
+
+- intent: completion_INC_removal
+  examples: |
+    - How do I complete an INC?
+    - How do I remove an INC?
+    - How do I remove an incomplete grade?
+    - What is the process for completing an INC?
+    - What is the process for removing an incomplete grade?
+    - What is the process for removing an incomplete grade?
+  
+- intent: dropping_enrolled_course
+  examples: |
+    - How do I drop an enrolled course?
+    - How do I remove an enrolled course?
+    - How do I cancel an enrolled course?
+    - What is the process for dropping an enrolled course?
+    - What is the process for removing an enrolled course?
+    - What is the process for canceling an enrolled course?
+
+- intent: LOA_application
+  examples: |
+    - How do I apply for a leave of absence?
+    - What is the process for applying for a leave of absence?
+    - How can I request a leave of absence?
+    - How do I file for a leave of absence?
+    - How do I request a leave of absence?
+    - How do I apply for a LOA?
+    - How do I file for a LOA?
+    - How do I request a LOA?
+    - How can I request a LOA?
+    - How can I apply for a LOA?
+
+- intent: plan_of_study_submission
+  examples: |
+    - How do I submit a plan of study?
+    - What is the process for submitting a plan of study?
+    - How can I submit a plan of study?
+    - How do I file for a plan of study?
+    - How do I request a plan of study?
+    - How do I apply for a plan of study?
+
+- intent: readmission_dismissed_status_and_waiver_of_MRR
+  examples: |
+    - How do I apply for readmission after being dismissed?
+    - How do I apply for readmission after being dismissed due to MRR?
+    - How do I apply for readmission after being dismissed due to the maximum residency rule?
+    - steps for readmission due to maximum residency?
+    - steps for readmission due to MRR?
+    - steps for readmission after being dismissed due to maximum residency?
+
+- intent: request_change_panel
+  examples: |
+    - How do I request a change in panel?
+    - What is the process for requesting a change in panel?
+    - How can I request a change in panel?
+    - How do I file for a change in panel?
+    - How do I request a change in panel?
+    - How do I apply for a change in panel?
+
+- intent: request_change_thesis_proposal
+  examples: |
+    - How do I request a change in thesis proposal?
+    - What is the process for requesting a change in thesis proposal?
+    - How can I request a change in thesis proposal?
+    - How do I file for a change in thesis proposal?
+    - How do I request a change in thesis proposal?
+    - How do I apply for a change in thesis proposal?
+
+- intent: request_TCG_and_certificaiton
+  examples: |
+    - How do I request a TCG?
+    - How do I request a true copy of grade?   
+    - How do I request certification?
+    - What is the process for requesting a true copy of grade?
+    - What is the process for requesting certification?
+    - What is the process for requesting a TCG and certification?
+    - How can I request a TCG or certification?
+    - How can i request true copy of grade?
+    - How can i request certification?
+    - Steps to get TCG?
+    - How do I file for a TCG or certification?
+    - How do I request a TCG and certification?
+    - How do I apply for a TCG and certification?
+  
+- intent: residency_application
+  examples: |
+    - How do I apply for residency?
+    - What is the process for applying for residency?
+    - How can I request for residency?
+    - How do I file for residency?
+    - How do I request residency?
+    - How do I apply for residency?
+  
+- intent: return_from_AWOL
+  examples: |
+    - How do I return from AWOL?
+    - What is the process for returning from Absence without leave?
+    - How can I request for returning from AWOL?
+    - How do I file for returning from absence without leave?
+    - How do I request returning from AWOL?
+    - How do I apply for returning from Absence without leave?
+    
+- intent: return_from_LOA
+  examples: |
+    - How do I return from leave of absence?
+    - What is the process for returning from LOA?
+    - How can I request for returning from LOA?
+    - How do I file for returning from leave of absence?
+    - How do I request returning from LOA?
+    - How do I apply for returning from leave of absence?
+
+- intent: submission_proposal_manuscript_to_OCS
+  examples: |
+    - How do I submit a proposal manuscript to [colsec](ocs_ent)?
+    - What is the process for submitting a proposal manuscript to [OCS](ocs_ent)?
+    - How can I submit a proposal manuscript to [OCS](ocs_ent)?
+    - How do I file for a proposal manuscript to [OCS](ocs_ent)?
+    - How do I request a proposal manuscript to [OCS](ocs_ent)?
+    - How do I apply for a proposal manuscript to [OCS](ocs_ent)?
+
+

@@ -1,0 +1,110 @@
+version: '3.1'
+intents:
+- document_graduation_application
+- document_overload_underload_application
+- document_residency_application
+- document_course_substitution_application
+- document_waiver_prerequisite_application
+- document_change_adviser_form
+- document_change_of_panel_form
+- document_changes_in_approved_thesis_proposal
+- document_dost_thesis_template
+- document_dropping_of_enrolled_subject
+- document_excuse_for_absence
+- document_leave_of_absence
+- document_memorandum_of_understanding
+- document_msfs_application_for_comprehensive_exam
+- document_permit_to_complete_inc_or_remove_4
+- document_plan_of_study_bsb
+- document_plan_of_study_bsam
+- document_plan_of_study_bscs
+- document_plan_of_study_bsft
+- document_plan_of_study_msfs
+- document_request_for_change_in_final_exam_schedule
+- document_return_from_leave_of_absence
+- document_shifting_form
+- document_university_clearance_and_alumni_form
+
+# entities:
+# - bsbio_program
+# - bsam_program
+# - bscs_program
+# - bsft_program  
+# - msfs_program
+
+responses:
+  utter_document_graduation_application:
+  - text: "Here is the file in Application for Graduation: https://drive.google.com/file/d/11aQ1ShvdV8N_K6cuPMBuTZBLDie9p20R/view"
+
+  utter_document_overload_underload_application:
+  - text: "Here is the file for Overload/Underloard form: https://drive.google.com/file/d/10OI7uffbhT3dJDKVk7ZXxgJad33tvngu/view"
+
+  utter_document_residency_application:
+  - text: "Here is the Residency Application form: https://drive.google.com/file/d/105flaMWV5sEekdIHWpbDAAwSzD5Ra_b_/view"
+ 
+  utter_document_course_substitution_application:
+  - text: "Here is the Application for Substitution of Courses form: https://drive.google.com/file/d/10lrwFNU1r06puTso5RYQDNRFsuhgiBBW/view"
+
+  utter_document_waiver_prerequisite_application:
+  - text: "Here is the file for Waiver of Prerequisit: https://drive.google.com/file/d/11iuICGMy_9yY1kN2wA3sO5V72cSdYIDy/view"
+
+  utter_document_change_adviser_form:
+  - text: "Here is the Change of Adviser form: https://drive.google.com/file/d/11JbR1uax_Ucv9DPyhFxsrb-xHdSEWiLR/view"
+
+  utter_document_change_of_panel_form:
+  - text: "Here is the document for change of panel: https://drive.google.com/file/d/10I8gYa-_Uh7KBffSJY6Fh8JfTrc_9gMP/view"
+
+  utter_document_changes_in_approved_thesis_proposal:
+  - text: "Here is the document for Changes in Approved Thesis Proposal: https://drive.google.com/file/d/11dEhYJAgd18bFOvvC6vtXe25FD6HPKkj/view"
+
+  utter_document_dost_thesis_template:
+  - text: "Here is the file for DOST Thesis Template: https://drive.google.com/file/d/10HJPcIYzTc0y0-ksQOa_e6Z0V1Fm3nJw/view"
+
+  utter_document_dropping_of_enrolled_subject:
+  - text: "Here is the form for Dropping Enrolled Subjects: https://drive.google.com/file/d/10Pcf4N4Jx0t0_gexFEy6Ux0lRB4okbOX/view"
+
+  utter_document_excuse_for_absence:
+  - text: "Here is the file for Excuse for Absence: https://drive.google.com/file/d/11aaVJLCqB1BH4BS0KwqPr0dVRXp0wqOt/view"
+
+  utter_document_leave_of_absence:
+  - text: "Here is the file for Leave of Absence: https://drive.google.com/file/d/107AQ2nNXeqC45AOyF-KzuSrknMPACD34/view"
+
+  utter_document_memorandum_of_understanding:
+  - text: "Here is the file for Memorandum of Understanding: https://drive.google.com/file/d/11Ws4qwY_fFODFEyr2EuOKpBzk9nG_NjV/view"
+
+  utter_document_msfs_application_for_comprehensive_exam:
+  - text: "MSFS Application for Comprehensive Exam: https://drive.google.com/file/d/11DvRop_CZ4ZOC4XU-GA8DZa8sUMrRo8R/view"
+  
+  utter_document_permit_to_complete_inc_or_remove_4:
+  - text: "Here is the file for Permit to Complete INC or Remove 4: https://drive.google.com/file/d/10G_rcx_T5W6f0aZz7gXAxfkzV89NqoIn/view"
+
+  utter_document_plan_of_study_bsb:
+  - text: "https://drive.google.com/file/d/11OYv8twx2s18aCQGNnJxxI4quPsBqlZt/view"
+
+  utter_document_plan_of_study_bsam:
+  - text: "https://drive.google.com/file/d/102yGkN9fR7BkMTwjqy0V4PuXZQCpvAXP/view"
+
+  utter_document_plan_of_study_bscs:
+  - text: "https://drive.google.com/file/d/10GGbvTfxWkZikGbkaf9Jb6alx-VMi1rV/view"
+
+  utter_document_plan_of_study_bsft:
+  - text: "https://drive.google.com/file/d/10oILMNny-MFgTovc8ROqSOB-MdLlXSz8/view"
+
+  utter_document_plan_of_study_msfs:
+  - text: https://drive.google.com/file/d/11DvRop_CZ4ZOC4XU-GA8DZa8sUMrRo8R/view"
+
+  utter_document_request_for_change_in_final_exam_schedule:
+  - text: "https://drive.google.com/file/d/11KiGVRrfKrDVDorKf9zy5_oUssTFzPT8/view"
+
+  utter_document_return_from_leave_of_absence:
+  - text: "https://drive.google.com/file/d/11bjfiYJSck7VPDpN30f44W9tiTVIh8jj/view"
+
+  utter_document_shifting_form:
+  - text: "https://drive.google.com/file/d/11V_kRr4DlJsLpv2VqnNfe377DXw8_E3F/view"
+  
+  utter_document_university_clearance_and_alumni_form:
+  - text: "https://drive.google.com/file/d/10Z5XdWkTqdBCd7sozXKELOXSC79erVUc/view"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

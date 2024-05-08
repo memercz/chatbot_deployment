@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chimiebot</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .chat-widget-container {
+      max-width: 800px;
+      width: 100%;
+      height: 500px;
+      /* Fixed height */
+      margin: 20px auto;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    #chat-messages {
+      flex: 1;
+      /* Fill remaining space */
+      padding: 10px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .user-input-container {
+      padding: 10px;
+      background-color: #f9f9f9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+    }
+
+    #user-input {
+      flex: 1;
+      padding: 8px;
+      border: 1px solid black;
+      border-radius: 20px;
+      margin-right: 10px;
+      min-height: 40px;
+      max-height: 40px;
+      /* Prevent the height from expanding */
+    }
+
+    #send-button {
+      border: none;
+      background-color: #007bff;
+      color: #fff;
+      padding: 8px 16px;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+
+    .message {
+      margin-bottom: 10px;
+      padding: 8px 16px;
+      border-radius: 20px;
+      max-width: 70%;
+      word-wrap: break-word;
+      align-self: flex-end;
+      /* Align user messages to the right */
+    }
+
+    .user-message {
+      background-color: #007bff;
+      color: #fff;
+    }
+
+    .bot-message {
+      background-color: #f0f0f0;
+      color: #333;
+      align-self: flex-start;
+      /* Align bot messages to the left */
+    }
+
+    .bot-message p {
+      margin: 0;
+    }
+
+    .bot-message img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+
+    .chat-title {
+      text-align: center;
+      padding: 10px;
+      font-size: 1.5rem;
+      font-weight: bold;
+      border-bottom: 1px solid #ddd;
+
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .button {
+/*           
+      max-width: fit-content;
+      max-height: fit-content; */
+      height: 20%;
+      width: 20%;
+
+      /* min-height: 20px; */
+      padding: 8px 4px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Chat widget container -->
+  <div class="chat-widget-container">
+    <h1 class="chat-title">Chimiebot</h1>
+
+    <!-- Chat messages container -->
+    <div id="chat-messages"></div>
+
+    <!-- User input and send button -->
+    <div class="user-input-container">
+      <input id="user-input" type="text" placeholder="Type your message...">
+      <button id="send-button">Send</button>
+    </div>
+
+  </div>
+  <div style="position: fixed; left: 0; bottom: 0; width: 100%; text-align: center;">
+    <footer>
+      <b>If you are done using the chatbot, please help me graduate by answering the form below:</b><br>
+      <b><a href="https://forms.gle/WjSiA6yUyhjdDx469" target="_blank"> >>Chatbot Usability Questionnaire<< </a><br>
+    </footer>
+  </div>
+
+  <script>
+    const userInput = document.getElementById('user-input');
+    const sendButton = document.getElementById('send-button');
+    const chatMessages = document.getElementById('chat-messages');
+
+    const user_id = Date.now();
+    function sendMessage() {
+      const query = userInput.value;
+      userInput.value = '';
+      userInput.style.height = 'auto'; // Reset the height
+
+      // Display the user's query in the conversation
+      const userMessageElement = document.createElement('div');
+      userMessageElement.classList.add('message', 'user-message');
+      userMessageElement.textContent = query;
+      chatMessages.appendChild(userMessageElement);
+
+      // Scroll to the latest message
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+
+      fetch('http://localhost:5005/webhooks/rest/webhook', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          "sender": user_id,
+          "message": query
+        }),
+      })
+        .then(response => {
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+          return response.json();
+        })
+        .then(data => {
+          data.forEach(message => {
+            const messageElement = document.createElement('div');
+            messageElement.classList.add('message', 'bot-message'); // Add bot-message class
+            const tableData = [
+              { FILENAME: "Add_Cancel_Change Matriculation.jpg", FILE_ID: "1-LV6myIUQ9Mu3U4TS7SVOMbNryWFNWQQ" },
+              { FILENAME: "Submission of Proposal_Manuscript to the OCS.jpg", FILE_ID: "1-HyRTQgnDrYgWkT18b_2BfZootSP-R80" },
+              { FILENAME: "Application for waiver of prerequisite.jpg", FILE_ID: "1-JpO5aDnEzvZkrT0HygNx4ElofZ1uS5u" },
+              { FILENAME: "Request for change of panel member.jpg", FILE_ID: "1-L7yJ0W9p8caUtKdgi8yAjhy8EUNKcwu" },
+              { FILENAME: "Plan of study submission.jpg", FILE_ID: "1-OU63x8s0V1FZ8NfK0UtieajaZFy_n7w" },
+              { FILENAME: "LOA application.jpg", FILE_ID: "1-eyq5s867sntMXAv1BXWCX_wQHsLKiH7" },
+              { FILENAME: "Residency Application.jpg", FILE_ID: "1-kEtqZbO4wP_5vZJheocFQ4OF1MVDWB1" },
+              { FILENAME: "Application for Graduation.jpg", FILE_ID: "1-kOxFTueFvLoASwdPvQjE6i15dmw1ptc" },
+              { FILENAME: "Return from LOA.jpg", FILE_ID: "1-rA5yZyDJlKb1sxd5LXltpCE0RaZuNB-" },
+              { FILENAME: "Request for changes in the thesis proposal.jpg", FILE_ID: "1-tfJSIIdTXlX2sTz4Z5VbphbwpMtJ3TD" },
+              { FILENAME: "Application for Overload_Underload.jpg", FILE_ID: "1-wxyBZjKCmLwlvqLKnKpYsk23Vore3oZ" },
+              { FILENAME: "Application for shifting.jpg", FILE_ID: "1-xezLm7fT7LzVseAGh2KusTHM-oUwktG" },
+              { FILENAME: "Completion of INC_Removal of 4  Process.jpg", FILE_ID: "101buXmHQPC2os57eCdNI7bxPfykTb41I" },
+              { FILENAME: "Dropping of enrolled course.jpg", FILE_ID: "10qYSxFRNp7dADE8HcgTwqhCx1UnzCbKb" },
+              { FILENAME: "Return from AWOL.jpg", FILE_ID: "10r92tgcNd0X-mVPGSBx57OL_SMlWfrTL" },
+              { FILENAME: "Request for TCG and certification.png", FILE_ID: "1-QNyMp7UX7zrr9dMTv48NzcUtjJabneb" },
+              { FILENAME: "Readmission from Dismissed status and waiver of MRR.png", FILE_ID: "1-eNVDsZy35XRvTgTUFgMc6Cp2a23flnQ" },
+              { FILENAME: "Application for graduation.pdf", FILE_ID: "11aQ1ShvdV8N_K6cuPMBuTZBLDie9p20R" },
+              { FILENAME: "APPLICATION FOR SUBSTITUTION OF COURSES.pdf", FILE_ID: "10lrwFNU1r06puTso5RYQDNRFsuhgiBBW" },
+              { FILENAME: "MSFS Application for Comprehensive Exam.pdf", FILE_ID: "11DvRop_CZ4ZOC4XU-GA8DZa8sUMrRo8M" },
+              { FILENAME: "SHIFTING form.pdf", FILE_ID: "11V_kRr4DlJsLpv2VqnNfe377DXw8_E3F" },
+              { FILENAME: "REQUEST FOR CHANGE IN FINAL EXAM SCHEDULE.docx", FILE_ID: "11KiGVRrfKrDVDorKf9zy5_oUssTFzPT8" },
+              { FILENAME: "RETURN FROM LEAVE OF ABSENCE.pdf", FILE_ID: "11bjfiYJSck7VPDpN30f44W9tiTVIh8jj" },
+              { FILENAME: "PLAN OF STUDY-MSFS.pdf", FILE_ID: "10W_pkCN4S1RSoGKmx_E1R6eqzdQKPJyi" },
+              { FILENAME: "PLAN OF STUDY-BSFT.docx", FILE_ID: "10oILMNny-MFgTovc8ROqSOB-MdLlXSz8" },
+              { FILENAME: "Plan of Study BSB.docx", FILE_ID: "11OYv8twx2s18aCQGNnJxxI4quPsBqlZt" },
+              { FILENAME: "PLAN OF STUDY-BSCS.docx", FILE_ID: "10GGbvTfxWkZikGbkaf9Jb6alx-VMi1rV" },
+              { FILENAME: "PLAN OF STUDY-BSAM.docx", FILE_ID: "102yGkN9fR7BkMTwjqy0V4PuXZQCpvAXP" },
+              { FILENAME: "Permit to complete INC or remove 4-.pdf", FILE_ID: "10G_rcx_T5W6f0aZz7gXAxfkzV89NqoIn" },
+              { FILENAME: "MEMORUNDUM OF UNDERSTANDING (MOU).doc", FILE_ID: "11Ws4qwY_fFODFEyr2EuOKpBzk9nG_NjV" },
+              { FILENAME: "Excuse for absence.docx", FILE_ID: "11aaVJLCqB1BH4BS0KwqPr0dVRXp0wqOt" },
+              { FILENAME: "DROPPING OF ENROLLED SUBJECT.pdf", FILE_ID: "10Pcf4N4Jx0t0_gexFEy6Ux0lRB4okbOX" },
+              { FILENAME: "DOST THESIS TEMPLATE.docx", FILE_ID: "10HJPcIYzTc0y0-ksQOa_e6Z0V1Fm3nJw" },
+              { FILENAME: "University clearance and alumni form.pdf", FILE_ID: "10Z5XdWkTqdBCd7sozXKELOXSC79erVUc" },
+              { FILENAME: "CHANGES_ IN APPROVED THESIS PROPOSAL.docx", FILE_ID: "11dEhYJAgd18bFOvvC6vtXe25FD6HPKkj" },
+              { FILENAME: "CHANGE OF ADVISER FORM.doc", FILE_ID: "11JbR1uax_Ucv9DPyhFxsrb-xHdSEWiLR" },
+              { FILENAME: "CHANGE OF PANELFORM.doc", FILE_ID: "10I8gYa-_Uh7KBffSJY6Fh8JfTrc_9gMP" },
+              { FILENAME: "APPLICATION OF WAIVER OF PREREQUISITE.pdf", FILE_ID: "11iuICGMy_9yY1kN2wA3sO5V72cSdYIDy" },
+              { FILENAME: "APPLICATION FOR OVERLOAD OR UNDERLOAD.pdf", FILE_ID: "10OI7uffbhT3dJDKVk7ZXxgJad33tvngu" },
+              { FILENAME: "APPLICATION FOR RESIDENCY.pdf", FILE_ID: "105flaMWV5sEekdIHWpbDAAwSzD5Ra_b_" },
+              { FILENAME: "LEAVE OF ABSENCE.pdf", FILE_ID: "107AQ2nNXeqC45AOyF-KzuSrknMPACD34" },
+              { FILENAME: "BSDS_Prospectus_May-2023.pdf", FILE_ID: "12LwsaTOlSsH_XAzHk3D1ODy940xMuc6o" },
+              { FILENAME: "BSFT 2018 Prospectus.pdf", FILE_ID: "116eD_RWdEGyecx-CFRST1vDPh8Utepsd" },
+              { FILENAME: "BSCS 2018 Prospectus.pdf", FILE_ID: "12MOe5wJuz4gvmyGaQuj1TA7mZ5wZZR_T" },
+              { FILENAME: "BSB_UPMin_2018_prospectus_fin_ver_.pdf", FILE_ID: "12TLsrEK_jZiahH6Rf1oL8898CydPbRK0" },
+              { FILENAME: "BSAM 2018 prospectus.pdf", FILE_ID: "11B9KFZB9wISu08sGmsDWXp3ah5SJXZGj" },
+              { FILENAME: "MSFS PROSPECTUS.pdf", FILE_ID: "10y5ZpCBCYD7EU5LSGMCeUwO5aKa2O6hT" },
+              { FILENEAME: "Guidelines on thesis defense application and submission.pdf", FILE_ID: "12y3wrocDk90fKbT7JNTUV9E4ja43D7ZX"},
+              { FILENAME: "CSM Proposal_ template.dotx", FILE_ID: "12qce1WsJUoGFLuBWdKDbgkNXv0xQRnmC"},
+              { FILENAME: "CSM Manuscript_Body_ template.dotx", FILE_ID: "13LdcWFlcKfOdDMl5UL2Tdt-m2XzkO2_o"}		
+            ];
+
+            // Function to extact file ID from URL
+            function extractFileId(url) {
+              let fileId;
+              if (url.includes('/d/')) {
+                fileId = url.split('/d/')[1].split('/view')[0];
+              } else if (url.includes('id=')) {
+                fileId = url.split('id=')[1];
+              }
+              return fileId;
+            }
+
+            // Function to get filename based on file ID
+            function getFilename(fileId) {
+              const entry = tableData.find(entry => entry.FILE_ID === fileId);
+              return entry ? entry.FILENAME : "Filename not found";
+            }
+            if (message.hasOwnProperty('text')) {
+
+              // Check if the message contains a Google Drive download link
+              if (message.text.includes('https://drive.google.com/uc?export=download&id=1') || message.text.includes('https://drive.google.com/file/d/')) {
+                // Create a new anchor element for the download link
+
+
+                // Test URL
+
+                const googleDriveUrl = message.text.match(/(?:https:\/\/drive\.google\.com\/uc\?export=download&id=|https:\/\/drive\.google\.com\/file\/d\/)([^\/\s]+)/)[0];
+
+
+                const downloadLink = document.createElement('a');
+                downloadLink.href = googleDriveUrl; // Assuming message.text contains the URL of the file
+                
+                // Extract the file ID from the Google Drive URL
+                const fileId = extractFileId(googleDriveUrl);
+                // Extract file ID from the URL
+                //const fileId = extractFileId(url);
+
+                // Get filename based on file ID
+                const filename = getFilename(fileId);
+
+
+                // // Extract the file name from the URL
+                // const filedname = message.text
+
+                downloadLink.textContent = filename;
+                downloadLink.setAttribute("download", ""); // Set the download attribute to trigger a download when clicked
+                downloadLink.setAttribute("target", "_blank"); // Open link in new tab
+
+                // Append the download link to the message container
+                const textElement = document.createElement('p');
+                message.text = message.text.split(googleDriveUrl)[0];
+                textElement.textContent = message.text;
+                messageElement.appendChild(textElement);
+                messageElement.appendChild(downloadLink);
+              }
+              else {
+                // Create a new paragraph element
+                const textElement = document.createElement('p');
+                //textElement.textContent = message.text;
+                textElement.innerHTML = message.text;
+                // Append the paragraph element to the message container
+                messageElement.appendChild(textElement);
+              }
+
+
+            }
+            if (message.hasOwnProperty('custom')) {
+              // Create a new paragraph element
+              const textElement = document.createElement('p');
+              const payloadtElement = document.createElement('p');
+              const titleElement = document.createElement('a');
+              const urlElement = document.createElement('a');
+              textElement.textContent = message.custom.text;
+              payloadtElement.textContent = message.custom.payload;
+              titleElement.textContent = message.custom.title;
+              urlElement.href = message.custom.url;
+
+
+              urlElement.textContent = message.custom.url;
+
+              console.log('text:', message.custom.text);
+              console.log('paylod:', message.custom.payload);
+              console.log('title:', message.custom.title);
+              console.log('url:', message.custom.url);
+              // Append the paragraph element to the message container
+              messageElement.appendChild(textElement);
+              messageElement.appendChild(urlElement);
+            }
+            if (message.hasOwnProperty('buttons')) {
+              const buttons = message.buttons;
+              const buttonContainer = document.createElement('div');
+              buttonContainer.classList.add('button-container');
+              buttons.forEach(button => {
+                const buttonElement = document.createElement('button');
+
+
+                buttonElement.classList.add('button');
+                buttonElement.textContent = button.title;
+
+
+                buttonElement.addEventListener('click', () => {
+                  // Create an anchor element to set the href
+                  const anchorElement = document.createElement('a');
+                  anchorElement.href = button.payload;
+                  anchorElement.target = '_blank';
+                  console.log('Button payload:', button.payload);
+                  // Simulate click on the anchor element to trigger navigation
+                  anchorElement.click();
+
+                  // Assign button.payload as the value of userInput
+                  userInput.value = button.payload;
+
+                  // Call sendMessage function
+                  sendMessage();
+                });
+                buttonContainer.appendChild(buttonElement);
+
+                // messageElement.appendChild(buttonElement);
+                messageElement.appendChild(buttonContainer);
+              });
+
+            }
+            if (message.hasOwnProperty('image')) {
+
+              // Create an anchor element
+              const anchorElement = document.createElement('a');
+              // Set the href attribute of the anchor
+              anchorElement.href = message.image;
+              console.log('Anchor href:', anchorElement.href); // Print the href value
+
+              // Set the target attribute of the anchor to open in a new tab
+              anchorElement.target = '_blank';
+              const imageElement = document.createElement('img');
+              imageElement.src = message.image;
+              // Append the image element to the anchor element
+              anchorElement.appendChild(imageElement);
+              // Append the anchor element to the message element
+              messageElement.appendChild(anchorElement);
+            }
+
+            chatMessages.appendChild(messageElement);
+            console.log('Message:', chatMessages);
+
+            // Scroll to the latest message
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+          });
+        })
+        .catch((error) => {
+          console.error('Error:', error);
+        });
+    }
+
+    sendButton.addEventListener('click', sendMessage);
+    userInput.addEventListener('keypress', function (event) {
+      // Check if the pressed key was Enter
+      if (event.key === 'Enter') {
+        sendMessage();
+      }
+    });
+
+
+  </script>
+</body>
+
+</html>

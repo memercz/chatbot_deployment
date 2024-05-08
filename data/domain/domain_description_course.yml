@@ -1,0 +1,100 @@
+version: "3.1"
+
+intents:
+  - define_bsam
+  - define_bsbio
+  - define_bscs
+  - define_bsft
+  - define_bsds
+  - define_msfs
+  
+
+
+
+responses:
+  utter_description_BSAM:
+  - text: "The Bachelor of Science in Applied Mathematics program is a 
+    4-year undergraduate degree program that provides graduates with the 
+    ability to identify, formulate, model, and analyze real-world problems 
+    and find their solutions using operations research techniques, geospatial tools, 
+    and statistical methods. It also provides competencies in the decision-making analysis, 
+    optimization, mathematical modeling and simulation, and the ability to implement and 
+    develop computer programs to facilitate complex computations."
+
+  utter_description_BSBIO:
+  - text: "The BS Biology program is a 4-year degree program with 147 units. The program offers a 
+    learning experience that encompasses the theoretical, quantitative, and applied aspects 
+    of the biological sciences. The strong foundation courses, the intensive practical 
+    laboratory and field experiences, and elective courses prepare the students 
+    for careers in scientific research, medicine, education, policy-making, 
+    environmental management, and several related fields in the country and 
+    the world. The graduates of the program will acquire critical thinking, 
+    social accountability, ethical judgment, equity, and openness for continuing professional development.<br><br>
+
+    The curriculum includes the conduct of undergraduate thesis which provides 
+    the students the opportunity to perform research work along with their chosen 
+    field of specialization under the guidance of their selected faculty adviser."
+
+  utter_description_BSCS:
+  - text: "The Bachelor of Science in Computer Science 
+    is a 4-year degree program that offers advanced studies in 
+    computer science and training in computer systems and software 
+    analysis and development. Students are equipped with the necessary and 
+    relevant knowledge and skills that meet the needs of the IT industry and 
+    the academe and for pursuing advanced degrees in computer science and related fields."
+
+  utter_description_BSFT:
+  - text: "BS Food Technology is a 4-year program 
+    that seeks to train students to be the prime movers 
+    of the food industry. The program focuses on providing students with appropriate 
+    knowledge, skills, and technique of the foundation courses of 
+    food technology in the interest of developing new food products, 
+    processes, and innovative food systems. Ultimately, graduates will 
+    be equipped with holistic understanding of food science and other 
+    disciplines to: ensure food safety and security, be able to define
+    problems related to food systems, identify potential causes and solutions, 
+    and make innovative decisions and recommendations, demonstrate skills in 
+    the evaluation and advocacy of food-related policies, and develop socially, 
+    culturally, and environmentally related food systems that promote equity and sustainability."
+
+  utter_description_BSDS:
+  - text: "Data science is an interdisciplinary subject at 
+    the crossroads of mathematics, computer science,
+    and domain expertise. The bachelor’s degree program envisions 
+    producing highly competent data analysis practitioners and problem
+      solvers, possessing entrepreneurial mindsets. These graduates 
+      will be problem solvers in various fields using applications of data 
+      science. With this, the program should reflect the interdisciplinary
+      nature of this field with emphasis on techniques, concepts and 
+      problem-solving processes. Moreover, students are expected to have a 
+      healthy mix of mathematics, computer science, and business courses to take."
+
+  utter_description_MSFS:
+  - text: "As UP Mindanao is envisioned to grow into a comprehensive University, its academic programs
+    shall put emphasis on science, technology, agriculture, and medicine so that it can assist the region
+      in the process of nation building.<br><br>
+
+    As new global issues emerge, the food industry is beset with 
+    concerns in waste reduction, food safety, food security, 
+    development of new products, and the like. The University 
+    believes that the MS Food Science program can assist in building 
+    up human resources who are equipped to find solutions to these problems. 
+    The Master’s Program is responsive to the needs of the food industry and the academe."
+  
+  utter_more_info_BSAM:
+  - text: "For more information about the Applied Mathematics program, you can visit this link: https://dmpcs.upmin.edu.ph/bs-applied-mathematics"
+
+  utter_more_info_BSBIO:
+  - text: "For more information about the Biology program, you can visit this link: https://dbses.upmin.edu.ph/academics/bs-biology/"
+
+  utter_more_info_BSCS:
+  - text: "For more information about the Computer Science program, you can visit this link: https://dmpcs.upmin.edu.ph/bs-computer-science/"
+
+  utter_more_info_BSFT:
+  - text: "For more information about the Food Technology program, you can visit this linkL https://dfsc.upmin.edu.ph/programs/"
+
+  utter_more_info_BSDS:
+  - text: "For more information about the Data Science program, you can visit this link: https://dmpcs.upmin.edu.ph/bs-data-science/"
+
+  utter_more_info_MSFS:
+  - text: "For more information about the Food Science program, you can visit this link: https://dfsc.upmin.edu.ph/programs/"

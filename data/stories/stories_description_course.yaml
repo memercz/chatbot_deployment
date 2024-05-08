@@ -1,0 +1,50 @@
+version: "3.1"
+
+stories:
+
+- story: explain BSAM course program
+  steps:
+  - intent: define_bsam
+    entities:
+    - bsam_program: "BSAM"
+  - action: utter_description_BSAM
+  - action: utter_more_info_BSAM
+- story: explain BSBIO course program
+  steps:
+  - intent: define_bsbio
+    entities:
+    - bsbio_program: "BSBIO"
+  - action: utter_description_BSBIO
+  - action: utter_more_info_BSBIO
+
+- story: explain BSCS course program
+  steps:
+  - intent: define_bscs
+    entities:
+    - bscs_program: "BSCS"
+  - action: utter_description_BSCS
+  - action: utter_more_info_BSCS
+
+- story: explain BSFT course program
+  steps:
+  - intent: define_bsft
+    entities:
+    - bsft_program: "BSFT"
+  - action: utter_description_BSFT
+  - action: utter_more_info_BSFT
+
+- story: explain BSDS course program
+  steps:
+  - intent: define_bsds
+    entities:
+    - bsds_program: "BSDS"
+  - action: utter_description_BSDS
+  - action: utter_more_info_BSDS
+
+- story: explain MSFS course program
+  steps:
+  - intent: define_msfs
+    entities:
+    - msfs_program: "MSFS"
+  - action: utter_description_MSFS
+  - action: utter_more_info_MSFS

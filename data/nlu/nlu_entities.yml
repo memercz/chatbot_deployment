@@ -1,0 +1,84 @@
+version: "3.1"
+nlu:    
+- synonym: BSAM
+  examples: |
+    - BSAM
+    - Bachelor of Science in Applied Mathematics
+    - Applied Mathematics
+    - BS in Applied Mathematics
+    - AMAT
+    - amat
+    - bsam
+    - bs amat
+    - bsamath
+
+- synonym: BSBIO
+  examples: |
+    - BS Biology
+    - Bachelor of Science in Biology
+    - Biology
+    - BS in Biology
+    - Bio
+    - bio
+    - bsbio
+
+- synonym: BSCS
+  examples: |
+    - BS Computer Science
+    - Bachelor of Science in Computer Science
+    - Computer Science
+    - BS in Computer Science
+    - comsci
+    - computer sci
+    - cs
+    - komsay
+    - bscs
+
+- synonym: BSFT
+  examples: |
+    - BS Food Technology
+    - Bachelor of Science in Food Technology
+    - Food Technology
+    - BS in Food Technology
+    - ft
+    - food tech
+    - foodtech
+    - fudtek
+    - bsft
+    - foodtek
+    
+- synonym: BSDS
+  examples: |
+    - BS Data Science
+    - Bachelor of Science in Data Science
+    - Data Science
+    - BS in Data Science
+    - ds
+    - data sci
+    - data science
+    - BS Data Science
+    - bsds
+
+- synonym: MSFS
+  examples: |
+    - MS Food Science
+    - Master of Science in Food Science
+    - Food Science
+    - MS in Food Science
+    - fs
+    - food sci
+    - food science
+    - MS Food Science
+    - master in food science
+    - food science masteral
+    - masteral in food science
+    - msfs
+
+- synonym: OCS
+  examples: |
+    - colsec
+    - college of secretary
+    - college secretary
+    - OCS
+    - Office of the College Secretary
+    - Office college secretary

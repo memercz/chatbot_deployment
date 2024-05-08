@@ -1,0 +1,184 @@
+version: "3.1"
+
+stories:
+- story: inquire academic programs story
+  steps:
+  - intent: inquire_academic_programs
+  - action: utter_inquire_academic_programs
+
+- story: academic year division story
+  steps:
+  - intent: academic_year_division
+  - action: utter_academic_year_division
+
+- story: course numbering system story
+  steps:
+  - intent: course_numbering_system
+  - action: utter_course_numbering_system
+
+- story: unit credit definition story
+  steps:
+  - intent: unit_credit_definition
+  - action: utter_unit_credit_definition
+
+- story: registration process story
+  steps:
+  - intent: registration_process
+  - action: utter_registration_process
+
+- story: maximum academic load story
+  steps:
+  - intent: maximum_academic_load
+  - action: utter_maximum_academic_load
+
+- story: matriculation change process story
+  steps:
+  - intent: matriculation_change_process
+  - action: utter_matriculation_change_process
+
+- story: cross registration policy story
+  steps:
+  - intent: cross_registration_policy
+  - action: utter_cross_registration_policy
+
+- story: attendance policy story
+  steps:
+  - intent: attendance_policy
+  - action: utter_attendance_policy
+
+- story: excessive absences policy story
+  steps:
+  - intent: excessive_absences_policy
+  - action: utter_excessive_absences_policy
+
+- story: course dropping process story
+  steps:
+  - intent: course_dropping_process
+  - action: utter_course_dropping_process
+
+- story: leave of absence policy story
+  steps:
+  - intent: leave_of_absence_policy
+  - action: utter_leave_of_absence_policy
+  
+- story: ask about grading system
+  steps:
+  - intent: grading_system
+  - action: utter_grading_system
+
+- story: ask about 4.0 grade policy
+  steps:
+  - intent: 4.0_grade_policy
+  - action: utter_4.0_grade_policy
+
+- story: ask about honorific scholarship
+  steps:
+  - intent: honorific_scholarship
+  - action: utter_honorific_scholarship
+
+- story: ask about scholastic delinquency
+  steps:
+  - intent: scholastic_delinquency
+  - action: utter_scholastic_delinquency
+
+- story: ask about maximum residency rule
+  steps:
+  - intent: maximum_residency_rule
+  - action: utter_maximum_residency_rule
+
+- story: ask about honorable dismissal
+  steps:
+  - intent: honorable_dismissal
+  - action: utter_honorable_dismissal
+
+
+#################COURSE PROSPECTUS######################
+- story: ask about BSAM retention policy
+  steps:
+  - intent: retention_policy_bsam
+    entities:
+    - bsam_program: "BSAM"
+  - action: utter_bsam_retention_policy
+  - action: utter_BSAMAT_prospectus
+
+- story: ask about BSBIO retention policy
+  steps:
+  - intent: retention_policy_bsbio
+    entities:
+    - bsbio_program: "BSBIO"
+  - action: utter_bsbio_retention_policy
+  - action: utter_BSBIO_prospectus
+
+- story: ask about BSCS retention policy
+  steps:
+  - intent: retention_policy_bscs
+    entities:
+    - bscs_program: "BSCS"
+  - action: utter_bscs_retention_policy
+  - action: utter_BSCS_prospectus
+
+- story: ask about BSFT retention policy
+  steps:
+  - intent: retention_policy_bsft
+    entities:
+    - bsft_program: "BSFT"
+  - action: utter_bsft_retention_policy
+  - action: utter_BSFT_prospectus
+
+- story: ask about BSDS retention policy
+  steps:
+  - intent: retention_policy_bsds
+    entities:
+    - bsds_program: "BSDS"
+  - action: utter_bsds_retention_policy
+  - action: utter_BSDS_prospectus
+
+- story: ask about MSFS retention policy
+  steps:
+  - intent: retention_policy_msfs
+    entities:
+    - msfs_program: "MSFS"
+  - action: utter_msfs_retention_policy
+  - action: utter_MSFS_prospectus
+#####################################################################
+
+
+- story: ask about waiver of prerequisite explanation
+  steps:
+  - intent: waiver_of_prerequisite_explanation
+  - action: utter_waiver_of_prerequisite_explanation
+
+- story: ask about graduation requirements
+  steps:
+  - intent: graduation_requirements
+  - action: utter_graduation_requirements
+
+- story: ask about graduation with honors
+  steps:
+  - intent: graduation_with_honors
+  - action: utter_graduation_with_honors
+
+- story: ask about commencement exercises
+  steps:
+  - intent: commencement_exercises
+  - action: utter_commencement_exercises
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# - story: proposal template story
+#   steps:
+#   - intent: proposal_template
+#   - action: utter_proposal_template

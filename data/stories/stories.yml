@@ -1,0 +1,157 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+# - story: academic programs inquiry
+#   steps:
+#   - intent: inquire_academic_programs
+#   - action: utter_academic_programs
+
+# - story: Inquire about academic year division
+#   steps:
+#   - intent: academic_year_division
+#   - action: utter_academic_year_division
+
+# - story: Inquire about course numbering system
+#   steps:
+#   - intent: course_numbering_system
+#   - action: utter_course_numbering_system
+
+# - story: Inquire about unit credit definition
+#   steps:
+#   - intent: unit_credit_definition
+#   - action: utter_unit_credit_definition
+
+# - story: Inquire about registration process
+#   steps:
+#   - intent: registration_process
+#   - action: utter_registration_process
+
+# - story: Inquire about maximum academic load
+#   steps:
+#   - intent: maximum_academic_load
+#   - action: utter_maximum_academic_load
+
+# - story: Inquire about matriculation change process
+#   steps:
+#   - intent: matriculation_change_process
+#   - action: utter_matriculation_change_process
+
+# - story: Inquire about cross-registration policy
+#   steps:
+#   - intent: cross_registration_policy
+#   - action: utter_cross_registration_policy
+
+# - story: Inquire about attendance policy
+#   steps:
+#   - intent: attendance_policy
+#   - action: utter_attendance_policy
+
+# - story: Inquire about excessive absences policy
+#   steps:
+#   - intent: excessive_absences_policy
+#   - action: utter_excessive_absences_policy
+
+# - story: Inquire about course dropping process
+#   steps:
+#   - intent: course_dropping_process
+#   - action: utter_course_dropping_process
+
+# - story: Inquire about leave of absence policy
+#   steps:
+#   - intent: leave_of_absence_policy
+#   - action: utter_leave_of_absence_policy
+
+# # - story: maximum residency rule
+# #   steps:
+# #   - intent: ask_maximum_residency_rule
+# #   - action: utter_explain_maximum_residency_rule
+
+# # - story: honorable dismissal
+# #   steps:
+# #   - intent: ask_honorable_dismissal
+# #   - action: utter_explain_honorable_dismissal
+
+# # - story: retention policy
+# #   steps:
+# #   - intent: ask_retention_policy
+# #   - action: utter_explain_retention_policy
+
+# # - story: graduation with honor 
+# #   steps:
+# #   - intent: ask_graduation_with_honors
+# #   - action: utter_explain_graduate_with_honors
+  
+# # - story: waiver of prerequisites
+# #   steps:
+# #   - intent: ask_waiver_of_prerequisites
+# #   - action: utter_explain_waiver_of_prerequisites
+
+# # - story: graduation requirements
+# #   steps:
+# #   - intent: ask_graduation_requirements
+# #   - action: utter_explain_graduation_requirements
+
+# # - story: proposal template
+# #   steps:
+# #   - intent: proposal_template
+# #   - action: utter_proposal_template
+
+# # - story: interactive_story_1
+# #   steps:
+# #   - intent: proposal_template
+# #   - action: utter_proposal_template
+
+# - story: User asks for a proposal template
+#   steps:
+#     - intent: proposal_template
+#     - action: action_send_proposal_template
+
+# - story: User asks for application for graduation
+#   steps:
+#     - intent: application_graduation
+#     - action: utter_application_graduation
+
+# - story: User asks for application for overload or underload
+#   steps:
+#     - intent: application_overload_underload
+#     - action: utter_application_overload_underload
+  
+# - story: User asks for application for shifting
+#   steps:
+#     - intent: application_shifting
+#     - action: utter_application_shifting
+
+
+# ############################
+# - story: User asks for time
+#   steps:
+#     - intent: inquire_time
+#     - action: action_tell_time

@@ -1,0 +1,132 @@
+version: "3.1"
+
+stories:
+- story: document graduation application
+  steps:
+  - intent: document_graduation_application
+  - action: utter_document_graduation_application
+
+- story: document overload/underload application
+  steps:
+  - intent: document_overload_underload_application
+  - action: utter_document_overload_underload_application
+
+- story: document residency application
+  steps:
+  - intent: document_residency_application
+  - action: utter_document_residency_application
+
+- story: document course substitution application
+  steps:
+  - intent: document_course_substitution_application
+  - action: utter_document_course_substitution_application
+
+- story: document waiver prerequisite application
+  steps:
+  - intent: document_waiver_prerequisite_application
+  - action: utter_document_waiver_prerequisite_application
+
+- story: document change adviser form
+  steps:
+  - intent: document_change_adviser_form
+  - action: utter_document_change_adviser_form
+
+- story: document change of panel form
+  steps:
+  - intent: document_change_of_panel_form
+  - action: utter_document_change_of_panel_form
+
+- story: document changes in approved thesis proposal
+  steps:
+  - intent: document_changes_in_approved_thesis_proposal
+  - action: utter_document_changes_in_approved_thesis_proposal
+
+- story: document dost thesis template
+  steps:
+  - intent: document_dost_thesis_template
+  - action: utter_document_dost_thesis_template
+  
+- story: document dropping of enrolled subject
+  steps:
+  - intent: document_dropping_of_enrolled_subject
+  - action: utter_document_dropping_of_enrolled_subject
+
+- story: document excuse for absence
+  steps:
+  - intent: document_excuse_for_absence
+  - action: utter_document_excuse_for_absence
+
+- story: document leave of absence
+  steps:
+  - intent: document_leave_of_absence
+  - action: utter_document_leave_of_absence
+
+- story: document memorandum of understanding
+  steps:
+  - intent: document_memorandum_of_understanding
+  - action: utter_document_memorandum_of_understanding
+
+- story: document msfs application for comprehensive exam
+  steps:
+  - intent: document_msfs_application_for_comprehensive_exam
+  - action: utter_document_msfs_application_for_comprehensive_exam
+
+- story: documment permit to complete inc or remove 4
+  steps:
+  - intent: document_permit_to_complete_inc_or_remove_4
+  - action: utter_document_permit_to_complete_inc_or_remove_4
+
+- story: documment request for change in final exam schedule
+  steps:
+  - intent: document_request_for_change_in_final_exam_schedule
+  - action: utter_document_request_for_change_in_final_exam_schedule
+
+- story: documment return from leave of absence
+  steps:
+  - intent: document_return_from_leave_of_absence
+  - action: utter_document_return_from_leave_of_absence
+
+- story: document shifting form
+  steps:
+  - intent: document_shifting_form
+  - action: utter_document_shifting_form
+
+- story: document university clearance and alumni form
+  steps:
+  - intent: document_university_clearance_and_alumni_form
+  - action: utter_document_university_clearance_and_alumni_form
+
+- story: document plan of study bsb
+  steps:
+  - intent: document_plan_of_study_bsb
+    entities:
+    - bsbio_program: "BSBIO"
+  - action: utter_document_plan_of_study_bsb
+
+- story: document plan of study bsam
+  steps:
+  - intent: document_plan_of_study_bsam
+    entities:
+    - bsam_program: "BSAM"
+  - action: utter_document_plan_of_study_bsam
+
+- story: document plan of study bscs
+  steps:
+  - intent: document_plan_of_study_bscs
+    entities:
+    - bscs_program: "BSCS"
+  - action: utter_document_plan_of_study_bscs
+
+- story: document plan of study bsft
+  steps:
+  - intent: document_plan_of_study_bsft
+    entities:
+    - bsft_program: "BSFT"
+  - action: utter_document_plan_of_study_bsft
+
+- story: document plan of study msfs
+  steps:
+  - intent: document_plan_of_study_msfs
+    entities:
+    - msfs_program: "MSFS"
+  - action: utter_document_plan_of_study_msfs

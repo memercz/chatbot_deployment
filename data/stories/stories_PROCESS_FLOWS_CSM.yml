@@ -1,0 +1,87 @@
+version: "3.1"
+
+stories:
+- story: add_cancel_change_mat story
+  steps:
+  - intent: add_cancel_change_mat
+  - action: utter_add_cancel_change_mat
+
+- story: application_graduation story
+  steps:
+  - intent: application_graduation
+  - action: utter_application_graduation
+
+- story: application_overload_underload story
+  steps:
+  - intent: application_overload_underload
+  - action: utter_application_overload_underload
+
+- story: application_shifting story
+  steps:
+  - intent: application_shifting
+  - action: utter_application_shifting
+
+- story: application_waiver_prerequisite story
+  steps:
+  - intent: application_waiver_prerequisite
+  - action: utter_application_waiver_prerequisite
+
+- story: completion_INC_removal story
+  steps:
+  - intent: completion_INC_removal
+  - action: utter_completion_INC_removal
+
+- story: dropping_enrolled_course story
+  steps:
+  - intent: dropping_enrolled_course
+  - action: utter_dropping_enrolled_course
+
+- story: LOA_application story
+  steps:
+  - intent: LOA_application
+  - action: utter_LOA_application
+
+- story: plan_of_study_submission story
+  steps:
+  - intent: plan_of_study_submission
+  - action: utter_plan_of_study_submission
+
+- story: readmission_dismissed_status_and_waiver_of_MRR story
+  steps:
+  - intent: readmission_dismissed_status_and_waiver_of_MRR
+  - action: utter_readmission_dismissed_status_and_waiver_of_MRR
+
+- story: request_change_panel story
+  steps:
+  - intent: request_change_panel
+  - action: utter_request_change_panel
+
+- story: request_change_thesis_proposal story
+  steps:
+  - intent: request_change_thesis_proposal
+  - action: utter_request_change_thesis_proposal
+
+- story: request_TCG_and_certificaiton story
+  steps:
+  - intent: request_TCG_and_certificaiton
+  - action: utter_request_TCG_and_certificaiton
+
+- story: residency_application story
+  steps:
+  - intent: residency_application
+  - action: utter_residency_application
+
+- story: return_from_AWOL story
+  steps:
+  - intent: return_from_AWOL
+  - action: utter_return_from_AWOL
+
+- story: return_from_LOA story
+  steps:
+  - intent: return_from_LOA
+  - action: utter_return_from_LOA
+
+- story: submission_proposal_manuscript_to_OCS story
+  steps:
+  - intent: submission_proposal_manuscript_to_OCS
+  - action: utter_submission_proposal_manuscript_to_OCS

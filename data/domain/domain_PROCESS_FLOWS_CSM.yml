@@ -1,0 +1,93 @@
+version: '3.1'
+intents:
+- add_cancel_change_mat
+- application_graduation
+- application_overload_underload
+- application_shifting
+- application_waiver_prerequisite
+- completion_INC_removal
+- dropping_enrolled_course
+- LOA_application
+- plan_of_study_submission
+- readmission_dismissed_status_and_waiver_of_MRR
+- request_change_panel
+- request_change_thesis_proposal
+- request_TCG_and_certificaiton
+- residency_application
+- return_from_AWOL
+- return_from_LOA
+- submission_proposal_manuscript_to_OCS
+
+responses:
+
+  utter_add_cancel_change_mat:
+    - text: "Pls follow the procedure on how to Add Mat, Cancel Mat, or Change Mat:"
+      image: https://drive.google.com/thumbnail?id=1-LV6myIUQ9Mu3U4TS7SVOMbNryWFNWQQ&sz=w1920
+  
+  utter_application_graduation:
+    - text: "Pls follow the procedure on how to Apply for Graduation"
+      image: https://drive.google.com/thumbnail?id=1-kOxFTueFvLoASwdPvQjE6i15dmw1ptc&sz=w1920
+    
+  utter_application_overload_underload:
+    - text: "Pls follow this procedure in Application for Overload/Underload  :"
+      image: https://drive.google.com/thumbnail?id=1-wxyBZjKCmLwlvqLKnKpYsk23Vore3oZ&sz=w1920
+
+  utter_application_shifting:
+    - text: "Follow the steps on how to Apply for Shifting:"
+      image: https://drive.google.com/thumbnail?id=1-xezLm7fT7LzVseAGh2KusTHM-oUwktG&sz=w1920
+
+  utter_application_waiver_prerequisite:
+    - text: "Pls follow the procedure for Applying Waiver of Prerequisite:"
+      image: https://drive.google.com/thumbnail?id=1-JpO5aDnEzvZkrT0HygNx4ElofZ1uS5u&sz=w1920
+    
+  utter_completion_INC_removal:
+    - text: "To complete INC Removal, follow this procedure:"
+      image: https://drive.google.com/thumbnail?id=101buXmHQPC2os57eCdNI7bxPfykTb41I&sz=w1920
+    
+  utter_dropping_enrolled_course:
+    - text: "To drop an enrolled course, please follow this procedure:"
+      image: https://drive.google.com/thumbnail?id=10qYSxFRNp7dADE8HcgTwqhCx1UnzCbKb&sz=w1920
+
+  utter_LOA_application:
+    - text: "To apply for Leave of Absence, follow this procedure:"
+      image: https://drive.google.com/thumbnail?id=1-eyq5s867sntMXAv1BXWCX_wQHsLKiH7&sz=w1920
+
+  utter_plan_of_study_submission:
+    - text: "Please follow this procedure in Submission of Plan of Study"
+      image: https://drive.google.com/thumbnail?id=1-rA5yZyDJlKb1sxd5LXltpCE0RaZuNB-&sz=w1920
+
+  utter_readmission_dismissed_status_and_waiver_of_MRR:
+    - text: "Please follow the steps to process Readmission from Dismissed Status and Waiver of MRR:"
+      image: https://drive.google.com/thumbnail?id=1-eNVDsZy35XRvTgTUFgMc6Cp2a23flnQ&sz=w1920
+
+  utter_request_change_panel:
+    - text: "Follow the steps on how to Request Change of Panel:"
+      image: https://drive.google.com/thumbnail?id=1-L7yJ0W9p8caUtKdgi8yAjhy8EUNKcwu&sz=w1920
+
+  utter_request_change_thesis_proposal:
+    - text: "Folow the steps on how to Request Change of Thesis Proposal:"
+      image: https://drive.google.com/thumbnail?id=1-tfJSIIdTXlX2sTz4Z5VbphbwpMtJ3TD&sz=w1920
+
+  utter_request_TCG_and_certificaiton:
+    - text: "Please follow the procedure on Requesting for TCG and Certification:"
+      image: https://drive.google.com/thumbnail?id=1-QNyMp7UX7zrr9dMTv48NzcUtjJabneb&sz=w1920
+
+  utter_residency_application:
+    - text: "You may follow the steps on how to Apply for Residency:"
+      image: https://drive.google.com/thumbnail?id=1-kEtqZbO4wP_5vZJheocFQ4OF1MVDWB1&sz=w1920
+
+  utter_return_from_AWOL:
+    - text: "Heres is the process on how to Return from Absence Without Leave:"
+      image: https://drive.google.com/thumbnail?id=10r92tgcNd0X-mVPGSBx57OL_SMlWfrTL&sz=w1920
+
+  utter_return_from_LOA:
+    - text: "Here is the process on Returning from LOA:"
+      image: https://drive.google.com/thumbnail?id=1-eyq5s867sntMXAv1BXWCX_wQHsLKiH7&sz=w1920
+    
+  utter_submission_proposal_manuscript_to_OCS:
+    - text: "PLease follow the procedure on Submitting Proposal Manuscript to OCS:"
+      image: https://drive.google.com/thumbnail?id=1-HyRTQgnDrYgWkT18b_2BfZootSP-R80&sz=w1920
+      
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

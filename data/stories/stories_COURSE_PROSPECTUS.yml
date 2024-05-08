@@ -1,0 +1,45 @@
+version: "3.1"
+
+stories:
+
+- story: ask about BS Applied Mathematics prospectus
+  steps:
+  - intent: BSAMAT_prospectus
+    entities:
+    - bsam_program: "BSAM"
+  - action: utter_BSAMAT_prospectus
+
+- story: ask about BS Computer Science prospectus
+  steps:
+  - intent: BSCS_prospectus
+    entities:
+    - bscs_program: "BSCS"
+  - action: utter_BSCS_prospectus
+
+- story: ask about BS Biology prospectus
+  steps:
+  - intent: BSBIO_prospectus
+    entities:
+    - bsbio_program: "BSBIO"
+  - action: utter_BSBIO_prospectus
+
+- story: ask about BS Food Technology prospectus
+  steps:
+  - intent: BSFT_prospectus
+    entities:
+    - bsft_program: "BSFT"
+  - action: utter_BSFT_prospectus
+
+- story: ask about BSDS prospectus
+  steps:
+  - intent: BSDS_prospectus
+    entities:
+    - bsds_program: "BSDS"
+  - action: utter_BSDS_prospectus
+
+- story: ask about MSFS prospectus
+  steps:
+  - intent: MSFS_prospectus
+    entities:
+    - msfs_program: "MSFS"
+  - action: utter_MSFS_prospectus

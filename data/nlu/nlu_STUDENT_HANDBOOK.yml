@@ -1,0 +1,360 @@
+version: "3.1"
+nlu:
+- intent: inquire_academic_programs
+  examples: |
+    - What other academic programs does the College of Science and Mathematics offer?
+    - Provide information about the academic programs in CSM.
+    - Can you tell me about the academic programs available in CSM?
+    - I'm interested in knowing the academic programs offered by the College of Science and Mathematics.
+    - Please give me details about the academic programs in CSM.
+    - What are the different academic programs in CSM?
+    - Tell me the academic programs available in the College of Science and Mathematics.
+
+- intent: academic_year_division
+  examples: |
+    - How is the academic year divided at UP?
+    - Explain the structure of the academic year in UP Mindanao.
+    - What is the academic year division like in UP?
+    - Can you provide information about the academic year division at the University of the Philippines Mindanao?
+    - Tell me how the academic year is divided in UP.
+    - What are the different divisions of the academic year in UP Min?
+    - Provide details about the academic year division in UP.
+
+- intent: course_numbering_system
+  examples: |
+    - How does the course numbering system function in UP?
+    - Describe the course numbering system.
+    - Can you explain how the course numbering system works in UP?
+    - What is the course numbering system like in UP?
+    - Provide information about the course numbering system in UP Min.
+    - How are courses numbered in UP?
+    - Tell me about the course numbering system in UP Mindanao.
+    - how does course number works?
+
+- intent: unit_credit_definition
+  examples: |
+    - What does a unit credit mean?
+    - Define semester hour and unit credit.
+    - Can you explain the concept of unit credit at the University of the Philippines?
+    - What is the definition of a unit credit in UP?
+    - Provide information about the unit credit system in UP.
+    - How is a unit credit calculated in UP?
+    - Explain the concept of unit credit in UP.
+
+- intent: registration_process
+  examples: |
+    - What is the official process for registration at UP?
+    - How does registration work in the University of the Philippines?
+    - Can you explain the registration process at UP?
+    - What are the steps involved in registration at UP?
+    - Provide information about the registration process in UP.
+    - How can I register for courses at UP?
+    - Explain the process of registration in UP.
+    - How to register for classes?
+
+- intent: maximum_academic_load
+  examples: |
+    - What is the maximum academic load for undergraduate students at UP?
+    - How many units can an undergraduate student take per semester?
+    - Can you provide information about the maximum academic load for undergraduates at UP?
+    - What is the limit on the number of units for undergraduate students in UP?
+    - Explain the maximum academic load policy for undergraduates in UP.
+    - How many courses can an undergraduate student enroll in per semester at UP?
+    - Tell me about the maximum academic load for undergraduates in UP.
+
+- intent: matriculation_change_process
+  examples: |
+    - How can I change my matriculation at UP?
+    - What is the procedure for changing enrolled classes?
+    - Can you explain how to change the matriculation at UP?
+    - What are the steps involved in changing enrolled classes at UP?
+    - Provide information about the process of changing matriculation in UP.
+    - How can I switch courses after matriculation at UP?
+    - Explain the matriculation change process in UP.
+
+- intent: cross_registration_policy
+  examples: |
+    - Can I register for classes in different colleges at UP?
+    - Tell me about the cross-registration policy in UP.
+    - How does cross-registration work in UP?
+    - What are the rules for registering for classes in different colleges at UP?
+    - Provide information about the cross-registration policy at UP.
+    - Can I take courses from multiple colleges at UP?
+    - Explain the policy for cross-registration in UP.
+    
+- intent: attendance_policy
+  examples: |
+    - What is the attendance policy at the University of the Philippines?
+    - How is attendance monitored at UP?
+    - Can you explain the attendance policy in UP?
+    - what happens if i miss a class?
+    - what happens if i got absent in a class?
+
+
+- intent: excessive_absences_policy
+  examples: |
+    - What happens if I have too many absences in a subject at UP?
+    - Explain the excessive absences policy in UP.
+    - How many absences are allowed?
+    - Maximum absences allowed in a subject?
+    - What are the consequences of excessive absences in UP?
+    - Will i get dropped if i have too many absences?
+
+- intent: course_dropping_process
+  examples: |
+    - How can I drop a course at the University of the Philippines?
+    - Tell me about the course dropping procedure in UP.
+    - What is the process for dropping a course at UP?
+    - Can you explain how to drop a course at UP?
+    - Provide information about the course dropping process in UP.
+
+- intent: leave_of_absence_policy
+  examples: |
+    - What is the leave of absence policy in UP?
+    - How does the University handle leave of absence requests?
+    - Can I take a leave of absence?
+    - Maximum duration of leave of absence?
+    - What are the requirements for taking a leave of absence?
+
+- intent: grading_system
+  examples: |
+    - How does the grading system work at UP?
+    - Explain the grading scale in the University of the Philippines.
+    - What is the grade calculation method?
+    - How are grades calculated in UP?
+    - is INC a passing grade?
+    - is 4.0 a passing grade?
+    - what is the minimum grade to pass a subject?
+    - what is the passing grade in UP?
+    - what grades can i receive?
+
+- intent: 4.0_grade_policy
+  examples: |
+    - What is the 4.0 grade policy at UP?
+    - Explain the 4.0 grade policy in the University of the Philippines.
+    - How does the University handle 4.0 grades?
+    - How to get 4.0 grade?
+    - What is the minimum grade to get 4.0?
+
+- intent: honorific_scholarship
+  examples: |
+    - What is the honorific scholarship at UP?
+    - Explain the honorific scholarship policy in the University of the Philippines.
+    - How to qualify for honorific scholarship?
+    - What are the requirements for honorific scholarship?
+    - how to become university scholar?
+    - how to become college scholar?
+    - how to become dean's lister?
+    - how to become chancellor's lister?
+    - what are the minimum grade to qualify for scholarship?
+    - can i still be a college scholar if i have a grade of 4.0?
+    - how many units needed to qualify for scholarship?
+
+- intent: scholastic_delinquency
+  examples: |
+    - What is scholastic delinquency?
+    - Explain the scholastic delinquency policy at UP.
+    - How does the University handle scholastic delinquency cases?
+    - What are the consequences of scholastic delinquency?
+    - How to get Warning status?
+    - How to get Probation status?
+
+- intent: maximum_residency_rule
+  examples: |
+    - What is the maximum residency rule at UP?
+    - What is the maximum residence policy in the University of the Philippines?
+    - Explain the maximum residence rule policy in the University of the Philippines.
+    - How does the University enforce the maximum residence rule?
+    - how many years can i stay in UP?
+    - how much residency is allowed?
+
+- intent: honorable_dismissal
+  examples: |
+    - What is an honorable dismissal?
+    - Explain the honorable dismissal policy at UP.
+    - How does the University handle honorable dismissal requests?
+    - What are the requirements for an honorable dismissal?
+    - how to get honorable dismissal?
+    - what is the process for honorable dismissal?
+
+########################COURSE PROSPECTUS#########################
+- intent: retention_policy_bsbio
+  examples: |
+    - What is the retention policy for [BS Biology](bsbio_program) students?
+    - Explain the retention policy for [Bio](bsbio_program) students.
+    - How does the University enforce the retention policy for [BS Biology](bsbio_program) students?
+    - what subjects should i pass to stay in [BS Biology](bsbio_program)?
+    - how can i be dismissed from [BS Biology](bsbio_program)?
+    - can i be dismissed from [BS Biology](bsbio_program) if i fail a subject?
+    - if i fail a subject, will i be dismissed from [BS Biology](bsbio_program)?
+    - i failed a major subject, will i be dismissed from [BS Biology](bsbio_program)?
+    - i failed a minor subject, will i be dismissed from [BS Biology](bsbio_program)?
+
+- intent: retention_policy_bsam
+  examples: |
+    - What is the retention policy for [BSAM](bsam_program) students?
+    - Explain the retention policy for [Bachelor of Science in Applied Mathematics](bsam_program) students.
+    - How does the University enforce the retention policy for [BSAM](bsam_program) students?
+    - what subjects should i pass to stay in [BSAM](bsam_program)?
+    - how can i be dismissed from [BSAM](bsam_program)?
+    - can i be dismissed from [BSAM](bsam_program) if i fail a subject?
+    - if i fail a subject, will i be dismissed from [BSAM](bsam_program)?
+    - i failed a major subject, will i be dismissed from [BSAM](bsam_program)?
+    - i failed a minor subject, will i be dismissed from [BSAM](bsam_program)?
+
+- intent: retention_policy_bscs
+  examples: |
+    - What is the retention policy for [BS Computer Science](bscs_program) students?
+    - Explain the retention policy for [Bachelor of Science in Computer Science](bscs_program) students.
+    - How does the University enforce the retention policy for [BS Computer Science](bscs_program) students?
+    - what subjects should i pass to stay in [BS Computer Science](bscs_program)?
+    - how can i be dismissed from [BS Computer Science](bscs_program)?
+    - can i be dismissed from [BS Computer Science](bscs_program) if i fail a subject?
+    - if i fail a subject, will i be dismissed from [BS Computer Science](bscs_program)?
+    - i failed a major subject, will i be dismissed from [BS Computer Science](bscs_program)?
+    - i failed a minor subject, will i be dismissed from [BS Computer Science](bscs_program)?
+
+- intent: retention_policy_bsft
+  examples: |
+    - What is the retention policy for [BS Food Technology](bsft_program) students?
+    - Explain the retention policy for [Bachelor of Science in Food Technology](bsft_program) students.
+    - How does the University enforce the retention policy for [BS Food Technology](bsft_program) students?
+    - what subjects should i pass to stay in [BS Food Technology](bsft_program)?
+    - how can i be dismissed from [BS Food Technology](bsft_program)?
+    - can i be dismissed from [BS Food Technology](bsft_program) if i fail a subject?
+    - if i fail a subject, will i be dismissed from [BS Food Technology](bsft_program)?
+    - i failed a major subject, will i be dismissed from [BS Food Technology](bsft_program)?
+    - i failed a minor subject, will i be dismissed from [BS Food Technology](bsft_program)?
+
+- intent: retention_policy_bsds
+  examples: |
+    - What is the retention policy for [BS Data Science](bsds_program)?
+    - Explain the retention policy for [Bachelor of Science in Data Science](bsds_program) students.
+    - How does the University enforce the retention policy for [BS Data Science](bsds_program) students?
+    - what subjects should i pass to stay in [BS Data Science](bsds_program)?
+    - how can i be dismissed from [BS Data Science](bsds_program)?
+    - can i be dismissed from [BS Data Science](bsds_program) if i fail a subject?
+    - if i fail a subject, will i be dismissed from [BS Data Science](bsds_program)?
+    - i failed a major subject, will i be dismissed from [BS Data Science](bsds_program)?
+    - i failed a minor subject, will i be dismissed from [BS Data Science](bsds_program)?
+
+- intent: retention_policy_msfs
+  examples: |
+    - What is the retention policy for [MS Food Science](msfs_program) students?
+    - Explain the retention policy for [Master of Science in Food Science](msfs_program) students.
+    - How does the University enforce the retention policy for [MS Food Science](msfs_program) students?
+    - what subjects should i pass to stay in [MS Food Science](msfs_program)?
+    - how can i be dismissed from [MS Food Science](msfs_program)?
+    - can i be dismissed from [MS Food Science](msfs_program) if i fail a subject?
+    - if i fail a subject, will i be dismissed from [MS Food Science](msfs_program)?
+    - i failed a major subject, will i be dismissed from [MS Food Science](msfs_program)?
+    - i failed a minor subject, will i be dismissed from [MS Food Science](msfs_program)?
+# - synonym: BSAM
+#   examples: |
+#     - BSAM
+#     - Bachelor of Science in Applied Mathematics
+#     - Applied Mathematics
+#     - BS in Applied Mathematics
+#     - AMAT
+#     - amat
+
+# - synonym: BSBIO
+#   examples: |
+#     - BS Biology
+#     - Bachelor of Science in Biology
+#     - Biology
+#     - BS in Biology
+#     - Bio
+#     - bio
+
+# - synonym: BSCS
+#   examples: |
+#     - BS Computer Science
+#     - Bachelor of Science in Computer Science
+#     - Computer Science
+#     - BS in Computer Science
+#     - comsci
+#     - computer sci
+#     - cs
+
+# - synonym: BSFT
+#   examples: |
+#     - BS Food Technology
+#     - Bachelor of Science in Food Technology
+#     - Food Technology
+#     - BS in Food Technology
+#     - ft
+#     - food tech
+#     - foodtech
+# - synonym: BSDS
+#   examples: |
+#     - BS Data Science
+#     - Bachelor of Science in Data Science
+#     - Data Science
+#     - BS in Data Science
+#     - ds
+#     - data sci
+#     - data science
+#     - BS Data Science
+
+# - synonym: MSFS
+#   examples: |
+#     - MS Food Science
+#     - Master of Science in Food Science
+#     - Food Science
+#     - MS in Food Science
+#     - fs
+#     - food sci
+#     - food science
+#     - MS Food Science
+#########################################
+
+- intent: waiver_of_prerequisite_explanation
+  examples: |
+    - How can I request a waiver of prerequisite for a course?
+    - What is the procedure for requesting a waiver of prerequisite?
+    - Can I apply for a waiver of prerequisite for a course?
+    - How does the University handle waiver of prereq requests? 
+    - How does waiver of prereq work?
+
+- intent: graduation_requirements
+  examples: |
+    - What are the graduation requirements at UP?
+    - Explain the requirements for graduation in the University of the Philippines.
+    - How do I qualify for graduation at UP?
+    - What are the criteria for graduation at UP?
+    - How to graduate from UP?
+    - What are the requirements for graduation?
+    - How many units are needed to graduate?
+
+- intent: graduation_with_honors
+  examples: |
+    - How can I graduate with honors at UP?
+    - What are the requirements for graduating with honors in the University of the Philippines?
+    - How does the University award honors to graduating students?
+    - What are the criteria for graduating with honors at UP?
+    - How to graduate with honors?
+    - Can i get with honors even if i have a grade of 4.0?
+    - How to become cum laude?
+    - How to become magna cum laude?
+    - How to become latin honor?
+
+- intent: commencement_exercises 
+  examples: |
+    - What is the commencement exercise?
+    - Explain the commencement exercise at UP.
+    - How does the University conduct commencement exercises?
+    - When is the commencement exercise held at UP?
+    - What is the schedule for commencement exercises?
+    - Is it okay to skip commencement exercises?
+    - What is the purpose of commencement exercises?
+    - is it okay not to join commencement exercises?
+
+# - intent: proposal_template
+#   examples: |
+#     - Can you provide a template for the proposal?
+#     - I need a proposal template.
+#     - How do I write a proposal?
+#     - What is the format for a proposal?
+#     - give me the proposal template
+
