@@ -166,7 +166,7 @@ responses:
         
 
   utter_4.0_grade_policy:
-  -text: "  A grade of 4.0 indicates conditional failure, which can be addressed by repeating the course successfully or passing a re-examination. If the student passes the re-examination, the grade is changed to 3.0; otherwise, it becomes a 5.0. Only one re-examination is allowed within one academic year from when the 4.0 grade was received.
+  - text: "  A grade of 4.0 indicates conditional failure, which can be addressed by repeating the course successfully or passing a re-examination. If the student passes the re-examination, the grade is changed to 3.0; otherwise, it becomes a 5.0. Only one re-examination is allowed within one academic year from when the 4.0 grade was received.
 
           If a student fails to remove the 4.0 grade within the prescribed time, credit for the course can only be earned by repeating and passing it.
 
