@@ -4,7 +4,7 @@
 
 **1. Install Python**
 
-   - Install Python version 3.8
+   - Install Python version 3.8 then do the next commands to make sure pip version was up to date:
 ```   
 python -m pip uninstall pip
 ```
