@@ -5,7 +5,7 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chimiebot</title>
+  <title>CSM Chatbot</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -134,7 +134,7 @@
 
   <!-- Chat widget container -->
   <div class="chat-widget-container">
-    <h1 class="chat-title">Chimiebot</h1>
+    <h1 class="chat-title">CSM Chatbot</h1>
 
     <!-- Chat messages container -->
     <div id="chat-messages"></div>
@@ -173,7 +173,7 @@
       // Scroll to the latest message
       chatMessages.scrollTop = chatMessages.scrollHeight;
 
-      fetch('http://localhost:5005/webhooks/rest/webhook', {
+      fetch('https://5588-124-217-126-89.ngrok-free.app/webhooks/rest/webhook', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
