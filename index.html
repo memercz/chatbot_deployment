@@ -154,6 +154,14 @@
   </div>
 
   <script>
+      window.onload = function() {
+    const chatMessages = document.getElementById('chat-messages');
+    const messageElement = document.createElement('div');
+    messageElement.textContent = "Hi! I'm a chatbot for the College of Science and Mathematics. I can provide info on programs, courses, processes, and assist with finding documents. Ask me anything! Don't forget to answer the form below to help me improve.";
+    messageElement.classList.add('message', 'bot-message');
+    chatMessages.appendChild(messageElement);
+  };
+
     const userInput = document.getElementById('user-input');
     const sendButton = document.getElementById('send-button');
     const chatMessages = document.getElementById('chat-messages');
