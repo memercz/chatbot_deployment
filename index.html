@@ -5,7 +5,7 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CSM Chatbot</title>
+  <title>Chimiebot</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -134,7 +134,7 @@
 
   <!-- Chat widget container -->
   <div class="chat-widget-container">
-    <h1 class="chat-title">CSM Chatbot</h1>
+    <h1 class="chat-title">Chimiebot</h1>
 
     <!-- Chat messages container -->
     <div id="chat-messages"></div>
@@ -173,7 +173,7 @@
       // Scroll to the latest message
       chatMessages.scrollTop = chatMessages.scrollHeight;
 
-      fetch(https://4535-124-217-126-89.ngrok-free.app/webhooks/rest/webhook', {
+      fetch('https://b6fc-124-217-126-89.ngrok-free.app/webhooks/rest/webhook', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -241,7 +241,7 @@
               { FILENAME: "BSB_UPMin_2018_prospectus_fin_ver_.pdf", FILE_ID: "12TLsrEK_jZiahH6Rf1oL8898CydPbRK0" },
               { FILENAME: "BSAM 2018 prospectus.pdf", FILE_ID: "11B9KFZB9wISu08sGmsDWXp3ah5SJXZGj" },
               { FILENAME: "MSFS PROSPECTUS.pdf", FILE_ID: "10y5ZpCBCYD7EU5LSGMCeUwO5aKa2O6hT" },
-              { FILENAME: "Guidelines on thesis defense application and submission.pdf", FILE_ID: "12y3wrocDk90fKbT7JNTUV9E4ja43D7ZX"},
+              { FILENEAME: "Guidelines on thesis defense application and submission.pdf", FILE_ID: "12y3wrocDk90fKbT7JNTUV9E4ja43D7ZX"},
               { FILENAME: "CSM Proposal_ template.dotx", FILE_ID: "12qce1WsJUoGFLuBWdKDbgkNXv0xQRnmC"},
               { FILENAME: "CSM Manuscript_Body_ template.dotx", FILE_ID: "13LdcWFlcKfOdDMl5UL2Tdt-m2XzkO2_o"}		
             ];
@@ -355,7 +355,7 @@
                   anchorElement.click();
 
                   // Assign button.payload as the value of userInput
-                  userInput.value = button.payload;
+                  // userInput.value = button.payload;
 
                   // Call sendMessage function
                   sendMessage();
