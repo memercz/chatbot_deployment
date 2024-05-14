@@ -5,7 +5,7 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chimiebot</title>
+  <title>CSM chatbot</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -134,10 +134,10 @@
 
   <!-- Chat widget container -->
   <div class="chat-widget-container">
-    <h1 class="chat-title">Chimiebot</h1>
+    <h1 class="chat-title">CSM chatbot</h1>
 
     <!-- Chat messages container -->
-    <div id="chat-messages"></div>
+    <div id="chat-messages"> </div>
 
     <!-- User input and send button -->
     <div class="user-input-container">
@@ -173,7 +173,7 @@
       // Scroll to the latest message
       chatMessages.scrollTop = chatMessages.scrollHeight;
 
-      fetch('https://b6fc-124-217-126-89.ngrok-free.app/webhooks/rest/webhook', {
+      fetch('http://localhost:5005/webhooks/rest/webhook', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -337,7 +337,9 @@
               const buttons = message.buttons;
               const buttonContainer = document.createElement('div');
               buttonContainer.classList.add('button-container');
+
               buttons.forEach(button => {
+
                 const buttonElement = document.createElement('button');
 
 
@@ -346,11 +348,21 @@
 
 
                 buttonElement.addEventListener('click', () => {
+                  if(button.payload.includes("https://")){
+                    const anchorElement = document.createElement('a');
+                    anchorElement.href = button.payload;
+                    anchorElement.target = '_blank';
+                    console.log('Button payload:', button.payload);
+                    // Simulate click on the anchor element to trigger navigation
+                    anchorElement.click();
+                  
+                  }
+
                   // Create an anchor element to set the href
-                  const anchorElement = document.createElement('a');
-                  anchorElement.href = button.payload;
-                  anchorElement.target = '_blank';
-                  console.log('Button payload:', button.payload);
+                  // const anchorElement = document.createElement('a');
+                  // anchorElement.href = button.payload;
+                  // anchorElement.target = '_blank';
+                  // console.log('Button payload:', button.payload);
                   // Simulate click on the anchor element to trigger navigation
                   anchorElement.click();
 
