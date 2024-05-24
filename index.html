@@ -368,51 +368,34 @@
               messageElement.appendChild(textElement);
               messageElement.appendChild(urlElement);
             }
-            if (message.hasOwnProperty('buttons')) {
+                        if (message.hasOwnProperty('buttons')) {
               const buttons = message.buttons;
               const buttonContainer = document.createElement('div');
               buttonContainer.classList.add('button-container');
 
               buttons.forEach(button => {
-
                 const buttonElement = document.createElement('button');
-
-
                 buttonElement.classList.add('button');
                 buttonElement.textContent = button.title;
 
-
                 buttonElement.addEventListener('click', () => {
-                  if(button.payload.includes("https://")){
+                  if (button.payload.includes("https://")) {
                     const anchorElement = document.createElement('a');
                     anchorElement.href = button.payload;
                     anchorElement.target = '_blank';
                     console.log('Button payload:', button.payload);
                     // Simulate click on the anchor element to trigger navigation
                     anchorElement.click();
-                  
+                  } else {
+                    // Assign button.payload as the value of userInput
+                    userInput.value = button.payload;
+                    // Call sendMessage function
+                    sendMessage();
                   }
-
-                  // Create an anchor element to set the href
-                  // const anchorElement = document.createElement('a');
-                  // anchorElement.href = button.payload;
-                  // anchorElement.target = '_blank';
-                  // console.log('Button payload:', button.payload);
-                  // Simulate click on the anchor element to trigger navigation
-                  anchorElement.click();
-
-                  // Assign button.payload as the value of userInput
-                  userInput.value = button.payload;
-
-                  // Call sendMessage function
-                  sendMessage();
                 });
                 buttonContainer.appendChild(buttonElement);
-
-                // messageElement.appendChild(buttonElement);
                 messageElement.appendChild(buttonContainer);
               });
-
             }
             if (message.hasOwnProperty('image')) {
 
