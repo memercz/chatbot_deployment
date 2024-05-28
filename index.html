@@ -46,6 +46,7 @@
       overflow-y: auto;
       display: flex;
       flex-direction: column;
+      height: 300px;
     }
 
     .user-input-container {
@@ -67,12 +68,14 @@
       max-height: 40px;
       /* Prevent the height from expanding */
     }
+
     footer {
       position: sticky;
       bottom: 0;
       width: 100%;
       height: 60px;
     }
+
     #send-button {
       border: none;
       background-color: #007bff;
@@ -130,7 +133,7 @@
     }
 
     .button {
-/*           
+      /*           
       max-width: fit-content;
       max-height: fit-content; */
       height: 20%;
@@ -149,10 +152,9 @@
       height: 60px;
       flex-direction: column;
       padding: 20px 0;
-      
+
     }
-    
-    
+  
   </style>
 </head>
 
@@ -174,20 +176,20 @@
   </div>
 
   <div class="form-container">
-      <b>If you are done using the chatbot, please help me graduate by answering the form below:</b><br>
-     
-      <b><a href="https://forms.gle/WjSiA6yUyhjdDx469" target="_blank"> >>Chatbot Usability Questionnaire<< </a><br>
-     
+    <b>If you are done using the chatbot, please help me graduate by answering the form below:</b><br>
+
+    <b><a href="https://forms.gle/WjSiA6yUyhjdDx469" target="_blank"> >>Chatbot Usability Questionnaire<< </a><br>
+
   </div>
 
   <script>
-      window.onload = function() {
-    const chatMessages = document.getElementById('chat-messages');
-    const messageElement = document.createElement('div');
-    messageElement.textContent = "Hi! I'm a chatbot for the College of Science and Mathematics. I can provide info on programs, courses, processes, and assist with finding documents. Ask me anything! Don't forget to answer the form below to help me improve.";
-    messageElement.classList.add('message', 'bot-message');
-    chatMessages.appendChild(messageElement);
-  };
+    window.onload = function () {
+      const chatMessages = document.getElementById('chat-messages');
+      const messageElement = document.createElement('div');
+      messageElement.textContent = "Hi! I'm a chatbot for the College of Science and Mathematics. I can provide info on programs, courses, processes, and assist with finding documents. Ask me anything! Don't forget to answer the form below to help me improve.";
+      messageElement.classList.add('message', 'bot-message');
+      chatMessages.appendChild(messageElement);
+    };
 
     const userInput = document.getElementById('user-input');
     const sendButton = document.getElementById('send-button');
@@ -199,6 +201,12 @@
       userInput.value = '';
       userInput.style.height = 'auto'; // Reset the height
 
+
+        // Create typing indicator
+      const typingIndicator = document.createElement('div');
+      typingIndicator.classList.add('message', 'bot-message', 'typing-indicator');
+      typingIndicator.textContent = 'Chatbot is typing...';
+
       // Display the user's query in the conversation
       const userMessageElement = document.createElement('div');
       userMessageElement.classList.add('message', 'user-message');
@@ -207,8 +215,9 @@
 
       // Scroll to the latest message
       chatMessages.scrollTop = chatMessages.scrollHeight;
-
-      fetch('https://899d-124-217-116-231.ngrok-free.app/webhooks/rest/webhook', {
+    // Add typing indicator
+    chatMessages.appendChild(typingIndicator);
+      fetch('https://2894-124-217-116-231.ngrok-free.app/webhooks/rest/webhook', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -225,6 +234,7 @@
           return response.json();
         })
         .then(data => {
+          chatMessages.removeChild(typingIndicator);
           data.forEach(message => {
             const messageElement = document.createElement('div');
             messageElement.classList.add('message', 'bot-message'); // Add bot-message class
@@ -276,9 +286,9 @@
               { FILENAME: "BSB_UPMin_2018_prospectus_fin_ver_.pdf", FILE_ID: "12TLsrEK_jZiahH6Rf1oL8898CydPbRK0" },
               { FILENAME: "BSAM 2018 prospectus.pdf", FILE_ID: "11B9KFZB9wISu08sGmsDWXp3ah5SJXZGj" },
               { FILENAME: "MSFS PROSPECTUS.pdf", FILE_ID: "10y5ZpCBCYD7EU5LSGMCeUwO5aKa2O6hT" },
-              { FILENEAME: "Guidelines on thesis defense application and submission.pdf", FILE_ID: "12y3wrocDk90fKbT7JNTUV9E4ja43D7ZX"},
-              { FILENAME: "CSM Proposal_ template.dotx", FILE_ID: "12qce1WsJUoGFLuBWdKDbgkNXv0xQRnmC"},
-              { FILENAME: "CSM Manuscript_Body_ template.dotx", FILE_ID: "13LdcWFlcKfOdDMl5UL2Tdt-m2XzkO2_o"}		
+              { FILENEAME: "Guidelines on thesis defense application and submission.pdf", FILE_ID: "12y3wrocDk90fKbT7JNTUV9E4ja43D7ZX" },
+              { FILENAME: "CSM Proposal_ template.dotx", FILE_ID: "12qce1WsJUoGFLuBWdKDbgkNXv0xQRnmC" },
+              { FILENAME: "CSM Manuscript_Body_ template.dotx", FILE_ID: "13LdcWFlcKfOdDMl5UL2Tdt-m2XzkO2_o" }
             ];
 
             // Function to extact file ID from URL
@@ -311,7 +321,7 @@
 
                 const downloadLink = document.createElement('a');
                 downloadLink.href = googleDriveUrl; // Assuming message.text contains the URL of the file
-                
+
                 // Extract the file ID from the Google Drive URL
                 const fileId = extractFileId(googleDriveUrl);
                 // Extract file ID from the URL
@@ -368,7 +378,7 @@
               messageElement.appendChild(textElement);
               messageElement.appendChild(urlElement);
             }
-                        if (message.hasOwnProperty('buttons')) {
+            if (message.hasOwnProperty('buttons')) {
               const buttons = message.buttons;
               const buttonContainer = document.createElement('div');
               buttonContainer.classList.add('button-container');
@@ -417,7 +427,7 @@
 
             chatMessages.appendChild(messageElement);
             console.log('Message:', chatMessages);
-
+            messageElement.scrollIntoView(false);
             // Scroll to the latest message
             chatMessages.scrollTop = chatMessages.scrollHeight;
           });
