@@ -226,6 +226,37 @@ if (imageElement) {
 }
 });
 
+      let listElementProcessFlows = document.createElement('div');
+      listElementProcessFlows.classList.add('message', 'bot-message');
+      chatMessages.appendChild(listElementProcessFlows);
+
+      let buttonProcessFlows = document.createElement('button');
+      buttonProcessFlows.innerHTML = "Process Flows";
+      listElementProcessFlows.appendChild(buttonProcessFlows);
+      // Add event listener to "Process Flows" button
+      buttonProcessFlows.addEventListener('click', function () {
+        // Check if the process flows buttons already exist
+        let botMessageElement = listElementProcessFlows.querySelector('.process-flows');
+        if (botMessageElement) {
+          // If they exist, toggle their visibility
+          botMessageElement.style.display = botMessageElement.style.display === 'none' ? '' : 'none';
+        } else {
+          // If they don't exist, create them
+          botMessageElement = document.createElement('ul'); // Create an unordered list
+          botMessageElement.classList.add('bot-message', 'process-flows'); // Add the 'bot-message' and 'process-flows' classes
+          listElementProcessFlows.appendChild(botMessageElement);
+
+          const processFlows = ["Add Cancel Change Matriculation", "Application for Graduation", "Application for Overload or Underload", "Application for shifting", "Application for waiver of prerequisite", "Completion of INC or Removal of 4  Process", "Dropping of enrolled course", "LOA application", "Plan of study submission", "Readmission from Dismissed status and waiver of MRR", "Request for change of panel member", "Request for changes in the thesis proposal", "Request for TCG and certification", "Residency Application", "Return from AWOL", "Return from LOA", "Submission of Proposal Manuscript to the OCS"];
+          for (let j = 0; j < processFlows.length; j++) {
+            let listItem = document.createElement('li'); // Create a list item
+            listItem.textContent = processFlows[j]; // Set the text content of the list item
+            botMessageElement.appendChild(listItem); // Append the list item to the unordered list
+          }
+        }
+      });
+
+    };
+
     const userInput = document.getElementById('user-input');
     const sendButton = document.getElementById('send-button');
     const chatMessages = document.getElementById('chat-messages');
