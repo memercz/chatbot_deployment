@@ -183,46 +183,48 @@
   </div>
 
   <script>
+
+  <script>
     window.onload = function () {
       const chatMessages = document.getElementById('chat-messages');
       const messageElement = document.createElement('div');
       messageElement.textContent = "Hi! I'm a chatbot for the College of Science and Mathematics. I can provide info on programs, courses, processes, and assist with finding documents. Ask me anything! Don't forget to answer the form below to help me improve.";
       messageElement.classList.add('message', 'bot-message');
       chatMessages.appendChild(messageElement);
+
       const introElement = document.createElement('div');
       introElement.textContent = "To get started you may click the buttons below or type your message in the chatbox.";
       introElement.classList.add('message', 'bot-message');
       chatMessages.appendChild(introElement);
+
+let listElementAskInformation = document.createElement('div');
+listElementAskInformation.classList.add('message', 'bot-message');
+chatMessages.appendChild(listElementAskInformation);
+
+let buttonAskInformation = document.createElement('button');
+buttonAskInformation.innerHTML = "Academic Calendar";
+listElementAskInformation.appendChild(buttonAskInformation);
+
+// Add event listener to "Ask Information" button
+buttonAskInformation.addEventListener('click', function () {
+  // Check if the image already exists
+  let imageElement = listElementAskInformation.querySelector('img');
+if (imageElement) {
+  // If it exists, toggle its visibility
+  imageElement.style.display = imageElement.style.display === 'none' ? '' : 'none';
+} else {
+  // If it doesn't exist, create it
+  imageElement = document.createElement('img');
+  imageElement.src = 'https://drive.google.com/thumbnail?id=11C2Khq9EqOSvlJo5n8GUviuTo-Gmgj85&sz=w700'; // Google Drive image URL
   
-      let listElementProcessFlows = document.createElement('div');
-      listElementProcessFlows.classList.add('message', 'bot-message');
-      chatMessages.appendChild(listElementProcessFlows);
-
-      let buttonProcessFlows = document.createElement('button');
-      buttonProcessFlows.innerHTML = "Process Flows";
-      listElementProcessFlows.appendChild(buttonProcessFlows);
-      // Add event listener to "Process Flows" button
-      buttonProcessFlows.addEventListener('click', function () {
-        // Check if the process flows buttons already exist
-        let botMessageElement = listElementProcessFlows.querySelector('.process-flows');
-        if (botMessageElement) {
-          // If they exist, toggle their visibility
-          botMessageElement.style.display = botMessageElement.style.display === 'none' ? '' : 'none';
-        } else {
-          // If they don't exist, create them
-          botMessageElement = document.createElement('ul'); // Create an unordered list
-          botMessageElement.classList.add('bot-message', 'process-flows'); // Add the 'bot-message' and 'process-flows' classes
-          listElementProcessFlows.appendChild(botMessageElement);
-
-          const processFlows = ["Add Cancel Change Matriculation", "Application for Graduation", "Application for Overload or Underload", "Application for shifting", "Application for waiver of prerequisite", "Completion of INC or Removal of 4  Process", "Dropping of enrolled course", "LOA application", "Plan of study submission", "Readmission from Dismissed status and waiver of MRR", "Request for change of panel member", "Request for changes in the thesis proposal", "Request for TCG and certification", "Residency Application", "Return from AWOL", "Return from LOA", "Submission of Proposal Manuscript to the OCS"];
-          for (let j = 0; j < processFlows.length; j++) {
-            let listItem = document.createElement('li'); // Create a list item
-            listItem.textContent = processFlows[j]; // Set the text content of the list item
-            botMessageElement.appendChild(listItem); // Append the list item to the unordered list
-          }
-        }
-      });
-    };
+  let anchorElement = document.createElement('a');
+  anchorElement.href = 'https://drive.google.com/file/d/11C2Khq9EqOSvlJo5n8GUviuTo-Gmgj85/view?usp=sharing'; // Replace with your desired URL
+  anchorElement.target = '_blank'; // Open in a new tab
+  anchorElement.appendChild(imageElement);
+  
+  listElementAskInformation.appendChild(anchorElement); // Append the anchorElement instead of imageElement
+}
+});
 
     const userInput = document.getElementById('user-input');
     const sendButton = document.getElementById('send-button');
