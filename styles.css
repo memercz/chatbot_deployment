@@ -181,12 +181,14 @@ footer {
 }
 
 .button-group {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 5px;   
-    width: 60%;
-    align-items: stretch;
+    display: flex;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 12px;
+    width: 40%;
+    /* border: 1px solid black; */
+    margin-left: 5%;
 }
+
 
 
 .row-container {
