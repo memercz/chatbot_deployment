@@ -147,7 +147,7 @@ footer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 5px;   
-    
+    width: 60%;
     align-items: stretch;
     
 }
@@ -186,7 +186,7 @@ footer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 5px;   
-    
+    width: 60%;
     align-items: stretch;
 }
 
