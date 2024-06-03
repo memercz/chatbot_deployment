@@ -2,268 +2,115 @@
 <html lang="en">
 
 <head>
-
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CSM chatbot</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      color: #000;
-      background-color: #f5f5f5;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin: 0;
-      padding: 0;
-      height: 100vh;
-      overflow-y: auto;
-      padding-bottom: 60px;
-      flex-direction: column;
-    }
+  <title>CSM chatbot </title>
+  <!-- <style>
 
-    .chat-widget-container {
-      /* max-width: 800px; */
-      width: 80%;
-      height: 90%;
-      /* Fixed height */
-      margin: 20px auto;
-      background-color: #fff;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      position: relative;
-      box-sizing: border-box;
-      flex-grow: 1;
-    }
-
-    #chat-messages {
-      flex: 1;
-      /* Fill remaining space */
-      padding: 10px;
-      overflow-y: auto;
-      display: flex;
-      flex-direction: column;
-      height: 300px;
-    }
-
-    .user-input-container {
-      padding: 10px;
-      background-color: #f9f9f9;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-    }
-
-    #user-input {
-      flex: 1;
-      padding: 8px;
-      border: 1px solid black;
-      border-radius: 20px;
-      margin-right: 10px;
-      min-height: 40px;
-      max-height: 40px;
-      /* Prevent the height from expanding */
-    }
-
-    footer {
-      position: sticky;
-      bottom: 0;
-      width: 100%;
-      height: 60px;
-    }
-
-    #send-button {
-      border: none;
-      background-color: #007bff;
-      color: #fff;
-      padding: 8px 16px;
-      border-radius: 20px;
-      cursor: pointer;
-    }
-
-    .message {
-      margin-bottom: 10px;
-      padding: 8px 16px;
-      border-radius: 20px;
-      max-width: 70%;
-      word-wrap: break-word;
-      align-self: flex-end;
-      /* Align user messages to the right */
-    }
-
-    .user-message {
-      background-color: #007bff;
-      color: #fff;
-    }
-
-    .bot-message {
-      background-color: #f0f0f0;
-      color: #000;
-      align-self: flex-start;
-      /* Align bot messages to the left */
-    }
-
-    .bot-message p {
-      margin: 0;
-    }
-
-    .bot-message img {
-      max-width: 100%;
-      border-radius: 8px;
-    }
-    .bot-message.process-flows {
-      columns: 2 auto;
-
-    }
-
-    .bot-message.process-flows button {
-      display: inline-block;
-      width: 100%;
-      box-sizing: border-box;
-      margin-bottom: 5px;
-    }
-
-    .chat-title {
-      text-align: center;
-      padding: 10px;
-      font-size: 1.5rem;
-      font-weight: bold;
-      border-bottom: 1px solid #ddd;
-
-    }
-
-    .button-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .button {
-      /*           
-      max-width: fit-content;
-      max-height: fit-content; */
-      height: 20%;
-      width: 20%;
-
-      /* min-height: 20px; */
-      padding: 8px 4px;
-    }
-
-    .form-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      bottom: 0;
-      width: 100%;
-      height: 60px;
-      flex-direction: column;
-      padding: 20px 0;
-
-    }
-  
-  </style>
+  </style> -->
 </head>
 
 <body>
 
   <!-- Chat widget container -->
   <div class="chat-widget-container">
-    <h1 class="chat-title">CSM chatbot</h1>
+    <div class="chat-title">
 
+      <h2>CSM chatbot </h2>
+
+      <p style="color: black;">🌻 Kindly evaluate the chabot by filling out the form:
+        <a href="https://forms.gle/WjSiA6yUyhjdDx469" target="_blank"> https://forms.gle/WjSiA6yUyhjdDx469 </a>🌻
+      </p>
+
+    </div>
     <!-- Chat messages container -->
     <div id="chat-messages"> </div>
 
     <!-- User input and send button -->
     <div class="user-input-container">
       <input id="user-input" type="text" placeholder="Type your message...">
-      <button id="send-button">Send</button>
+      <button id="send-button"><i class="fas fa-arrow-right"></i> </button>
     </div>
 
   </div>
 
-  <div class="form-container">
-    <b>If you are done using the chatbot, please help me graduate by answering the form below:</b><br>
 
-    <b><a href="https://forms.gle/WjSiA6yUyhjdDx469" target="_blank"> >>Chatbot Usability Questionnaire<< </a><br>
-
-  </div>
 
   <script>
+
     window.onload = function () {
       const chatMessages = document.getElementById('chat-messages');
       const messageElement = document.createElement('div');
-      messageElement.textContent = "Hi! I'm a chatbot for the College of Science and Mathematics. I can provide info on programs, courses, processes, and assist with finding documents. Ask me anything! Don't forget to answer the form below to help me improve.";
+      messageElement.textContent = "Hi! 👋 I'm a chatbot for the College of Science and Mathematics. I can provide info on academic information, processes, and assist with finding documents. Don't forget to answer the form below to help me improve. 😊";
       messageElement.classList.add('message', 'bot-message');
       chatMessages.appendChild(messageElement);
 
+      const specificQueryElement = document.createElement('div');
+      specificQueryElement.textContent = "Please be specific with your queries to help me assist you better. 🎯";
+      specificQueryElement.classList.add('message', 'bot-message');
+      chatMessages.appendChild(specificQueryElement);
+
       const introElement = document.createElement('div');
-      introElement.textContent = "To get started you may click the buttons below or type your message in the chatbox.";
+      introElement.textContent = "To get started you may click the buttons below or type your query in the chatbox. 🚀";
       introElement.classList.add('message', 'bot-message');
       chatMessages.appendChild(introElement);
 
-let listElementAskInformation = document.createElement('div');
-listElementAskInformation.classList.add('message', 'bot-message');
-chatMessages.appendChild(listElementAskInformation);
+      let buttonGroup = document.createElement('div');
+      buttonGroup.classList.add('button-group');
+      chatMessages.appendChild(buttonGroup);
 
-let buttonAskInformation = document.createElement('button');
-buttonAskInformation.innerHTML = "Academic Calendar";
-listElementAskInformation.appendChild(buttonAskInformation);
+      let listElementAskInformation = document.createElement('div');
+      //listElementAskInformation.classList.add('button-group');
+      buttonGroup.appendChild(listElementAskInformation);
 
-// Add event listener to "Ask Information" button
-buttonAskInformation.addEventListener('click', function () {
-  // Check if the image already exists
-  let imageElement = listElementAskInformation.querySelector('img');
-if (imageElement) {
-  // If it exists, toggle its visibility
-  imageElement.style.display = imageElement.style.display === 'none' ? '' : 'none';
-} else {
-  // If it doesn't exist, create it
-  imageElement = document.createElement('img');
-  imageElement.src = 'https://drive.google.com/thumbnail?id=11C2Khq9EqOSvlJo5n8GUviuTo-Gmgj85&sz=w700'; // Google Drive image URL
-  
-  let anchorElement = document.createElement('a');
-  anchorElement.href = 'https://drive.google.com/file/d/11C2Khq9EqOSvlJo5n8GUviuTo-Gmgj85/view?usp=sharing'; // Replace with your desired URL
-  anchorElement.target = '_blank'; // Open in a new tab
-  anchorElement.appendChild(imageElement);
-  
-  listElementAskInformation.appendChild(anchorElement); // Append the anchorElement instead of imageElement
-}
-});
+      let buttonAskInformation = document.createElement('button');
+      buttonAskInformation.classList.add('button');
 
+      buttonAskInformation.innerHTML = "Academic Calendar";
+      listElementAskInformation.appendChild(buttonAskInformation);
+
+      // Add event listener to "Ask Information" button
+      buttonAskInformation.addEventListener('click', function () {
+        // Check if the image already exists
+        userInput.value = "Give me academic calendar";
+        sendMessage();
+        buttonGroup.querySelectorAll('button').forEach(button => button.remove());
+      });
       let listElementProcessFlows = document.createElement('div');
-      listElementProcessFlows.classList.add('message', 'bot-message');
-      chatMessages.appendChild(listElementProcessFlows);
+      //listElementProcessFlows.classList.add('button-group');
+      // chatMessages.appendChild(listElementProcessFlows);
+      buttonGroup.appendChild(listElementProcessFlows);
 
       let buttonProcessFlows = document.createElement('button');
       buttonProcessFlows.innerHTML = "Process Flows";
+      buttonProcessFlows.classList.add('button');
       listElementProcessFlows.appendChild(buttonProcessFlows);
-      // Add event listener to "Process Flows" button
+
       buttonProcessFlows.addEventListener('click', function () {
-        // Check if the process flows buttons already exist
-        let botMessageElement = listElementProcessFlows.querySelector('.process-flows');
-        if (botMessageElement) {
-          // If they exist, toggle their visibility
-          botMessageElement.style.display = botMessageElement.style.display === 'none' ? '' : 'none';
-        } else {
-          // If they don't exist, create them
-          botMessageElement = document.createElement('ul'); // Create an unordered list
-          botMessageElement.classList.add('bot-message', 'process-flows'); // Add the 'bot-message' and 'process-flows' classes
-          listElementProcessFlows.appendChild(botMessageElement);
+        // Create the message
+        let processMessage = "List of Process flows";
 
-          const processFlows = ["Add Cancel Change Matriculation", "Application for Graduation", "Application for Overload or Underload", "Application for shifting", "Application for waiver of prerequisite", "Completion of INC or Removal of 4  Process", "Dropping of enrolled course", "LOA application", "Plan of study submission", "Readmission from Dismissed status and waiver of MRR", "Request for change of panel member", "Request for changes in the thesis proposal", "Request for TCG and certification", "Residency Application", "Return from AWOL", "Return from LOA", "Submission of Proposal Manuscript to the OCS"];
-          for (let j = 0; j < processFlows.length; j++) {
-            let listItem = document.createElement('li'); // Create a list item
-            listItem.textContent = processFlows[j]; // Set the text content of the list item
-            botMessageElement.appendChild(listItem); // Append the list item to the unordered list
-          }
-        }
+        // Set the userInput value to the button payload
+        userInput.value = processMessage;
+        sendMessage();
+        buttonGroup.querySelectorAll('button').forEach(button => button.remove());;
       });
+      let listElementRequestDocuments = document.createElement('div');
+buttonGroup.appendChild(listElementRequestDocuments);
 
+let buttonRequestDocuments = document.createElement('button');
+buttonRequestDocuments.innerHTML = "Request Documents";
+buttonRequestDocuments.classList.add('button');
+listElementRequestDocuments.appendChild(buttonRequestDocuments);
+
+buttonRequestDocuments.addEventListener('click', function () {
+    // Set the userInput value to the desired message
+    userInput.value = "Available documents";
+    sendMessage();
+    buttonGroup.querySelectorAll('button').forEach(button => button.remove());
+});
     };
 
     const userInput = document.getElementById('user-input');
@@ -277,10 +124,11 @@ if (imageElement) {
       userInput.style.height = 'auto'; // Reset the height
 
 
-        // Create typing indicator
+      // Create typing indicator
       const typingIndicator = document.createElement('div');
-      typingIndicator.classList.add('message', 'bot-message', 'typing-indicator');
-      typingIndicator.textContent = 'Chatbot is typing...';
+      typingIndicator.classList.add('message', 'typing-indicator');
+      typingIndicator.innerHTML = '<span></span><span></span><span></span>';
+      //typingIndicator.textContent = 'Chatbot is typing...';
 
       // Display the user's query in the conversation
       const userMessageElement = document.createElement('div');
@@ -290,9 +138,9 @@ if (imageElement) {
 
       // Scroll to the latest message
       chatMessages.scrollTop = chatMessages.scrollHeight;
-    // Add typing indicator
-    chatMessages.appendChild(typingIndicator);
-      fetch('https://4e3d-124-217-116-231.ngrok-free.app/webhooks/rest/webhook', {
+      // Add typing indicator
+      chatMessages.appendChild(typingIndicator);
+      fetch('http://localhost:5005/webhooks/rest/webhook', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -313,6 +161,7 @@ if (imageElement) {
           data.forEach(message => {
             const messageElement = document.createElement('div');
             messageElement.classList.add('message', 'bot-message'); // Add bot-message class
+
             const tableData = [
               { FILENAME: "Add_Cancel_Change Matriculation.jpg", FILE_ID: "1-LV6myIUQ9Mu3U4TS7SVOMbNryWFNWQQ" },
               { FILENAME: "Submission of Proposal_Manuscript to the OCS.jpg", FILE_ID: "1-HyRTQgnDrYgWkT18b_2BfZootSP-R80" },
@@ -356,14 +205,15 @@ if (imageElement) {
               { FILENAME: "APPLICATION FOR RESIDENCY.pdf", FILE_ID: "105flaMWV5sEekdIHWpbDAAwSzD5Ra_b_" },
               { FILENAME: "LEAVE OF ABSENCE.pdf", FILE_ID: "107AQ2nNXeqC45AOyF-KzuSrknMPACD34" },
               { FILENAME: "BSDS_Prospectus_May-2023.pdf", FILE_ID: "12LwsaTOlSsH_XAzHk3D1ODy940xMuc6o" },
-              { FILENAME: "BSFT 2018 Prospectus.pdf", FILE_ID: "116eD_RWdEGyecx-CFRST1vDPh8Utepsd" },
-              { FILENAME: "BSCS 2018 Prospectus.pdf", FILE_ID: "12MOe5wJuz4gvmyGaQuj1TA7mZ5wZZR_T" },
-              { FILENAME: "BSB_UPMin_2018_prospectus_fin_ver_.pdf", FILE_ID: "12TLsrEK_jZiahH6Rf1oL8898CydPbRK0" },
-              { FILENAME: "BSAM 2018 prospectus.pdf", FILE_ID: "11B9KFZB9wISu08sGmsDWXp3ah5SJXZGj" },
+              { FILENAME: "BSFT 2022 Prospectus.pdf", FILE_ID: "116eD_RWdEGyecx-CFRST1vDPh8Utepsd" },
+              { FILENAME: "BSCS 2022 Prospectus.pdf", FILE_ID: "12MOe5wJuz4gvmyGaQuj1TA7mZ5wZZR_T" },
+              { FILENAME: "BSB_UPMin_2022_prospectus_fin_ver_.pdf", FILE_ID: "12TLsrEK_jZiahH6Rf1oL8898CydPbRK0" },
+              { FILENAME: "BSAM 2022 prospectus.pdf", FILE_ID: "11B9KFZB9wISu08sGmsDWXp3ah5SJXZGj" },
               { FILENAME: "MSFS PROSPECTUS.pdf", FILE_ID: "10y5ZpCBCYD7EU5LSGMCeUwO5aKa2O6hT" },
-              { FILENEAME: "Guidelines on thesis defense application and submission.pdf", FILE_ID: "12y3wrocDk90fKbT7JNTUV9E4ja43D7ZX" },
+              { FILENAME: "Guidelines on thesis defense application and submission.pdf", FILE_ID: "12y3wrocDk90fKbT7JNTUV9E4ja43D7ZX" },
               { FILENAME: "CSM Proposal_ template.dotx", FILE_ID: "12qce1WsJUoGFLuBWdKDbgkNXv0xQRnmC" },
-              { FILENAME: "CSM Manuscript_Body_ template.dotx", FILE_ID: "13LdcWFlcKfOdDMl5UL2Tdt-m2XzkO2_o" }
+              { FILENAME: "CSM Manuscript_Body_ template.dotx", FILE_ID: "13LdcWFlcKfOdDMl5UL2Tdt-m2XzkO2_o" },
+              { FILENAME: "Application for MSFS Comprehensive Exam.pdf", FILE_ID: "11DvRop_CZ4ZOC4XU-GA8DZa8sUMrRo8R"}
             ];
 
             // Function to extact file ID from URL
@@ -376,7 +226,6 @@ if (imageElement) {
               }
               return fileId;
             }
-
             // Function to get filename based on file ID
             function getFilename(fileId) {
               const entry = tableData.find(entry => entry.FILE_ID === fileId);
@@ -386,28 +235,16 @@ if (imageElement) {
 
               // Check if the message contains a Google Drive download link
               if (message.text.includes('https://drive.google.com/uc?export=download&id=1') || message.text.includes('https://drive.google.com/file/d/')) {
-                // Create a new anchor element for the download link
-
-
-                // Test URL
 
                 const googleDriveUrl = message.text.match(/(?:https:\/\/drive\.google\.com\/uc\?export=download&id=|https:\/\/drive\.google\.com\/file\/d\/)([^\/\s]+)/)[0];
-
 
                 const downloadLink = document.createElement('a');
                 downloadLink.href = googleDriveUrl; // Assuming message.text contains the URL of the file
 
                 // Extract the file ID from the Google Drive URL
                 const fileId = extractFileId(googleDriveUrl);
-                // Extract file ID from the URL
-                //const fileId = extractFileId(url);
 
-                // Get filename based on file ID
                 const filename = getFilename(fileId);
-
-
-                // // Extract the file name from the URL
-                // const filedname = message.text
 
                 downloadLink.textContent = filename;
                 downloadLink.setAttribute("download", ""); // Set the download attribute to trigger a download when clicked
@@ -427,61 +264,12 @@ if (imageElement) {
                 textElement.innerHTML = message.text;
                 // Append the paragraph element to the message container
                 messageElement.appendChild(textElement);
+                console.log('text oten 1st');
               }
 
 
             }
-            if (message.hasOwnProperty('custom')) {
-              // Create a new paragraph element
-              const textElement = document.createElement('p');
-              const payloadtElement = document.createElement('p');
-              const titleElement = document.createElement('a');
-              const urlElement = document.createElement('a');
-              textElement.textContent = message.custom.text;
-              payloadtElement.textContent = message.custom.payload;
-              titleElement.textContent = message.custom.title;
-              urlElement.href = message.custom.url;
 
-
-              urlElement.textContent = message.custom.url;
-
-              console.log('text:', message.custom.text);
-              console.log('paylod:', message.custom.payload);
-              console.log('title:', message.custom.title);
-              console.log('url:', message.custom.url);
-              // Append the paragraph element to the message container
-              messageElement.appendChild(textElement);
-              messageElement.appendChild(urlElement);
-            }
-            if (message.hasOwnProperty('buttons')) {
-              const buttons = message.buttons;
-              const buttonContainer = document.createElement('div');
-              buttonContainer.classList.add('button-container');
-
-              buttons.forEach(button => {
-                const buttonElement = document.createElement('button');
-                buttonElement.classList.add('button');
-                buttonElement.textContent = button.title;
-
-                buttonElement.addEventListener('click', () => {
-                  if (button.payload.includes("https://")) {
-                    const anchorElement = document.createElement('a');
-                    anchorElement.href = button.payload;
-                    anchorElement.target = '_blank';
-                    console.log('Button payload:', button.payload);
-                    // Simulate click on the anchor element to trigger navigation
-                    anchorElement.click();
-                  } else {
-                    // Assign button.payload as the value of userInput
-                    userInput.value = button.payload;
-                    // Call sendMessage function
-                    sendMessage();
-                  }
-                });
-                buttonContainer.appendChild(buttonElement);
-                messageElement.appendChild(buttonContainer);
-              });
-            }
             if (message.hasOwnProperty('image')) {
 
               // Create an anchor element
@@ -502,6 +290,54 @@ if (imageElement) {
 
             chatMessages.appendChild(messageElement);
             console.log('Message:', chatMessages);
+
+
+            if (message.hasOwnProperty('buttons')) {
+              const buttons = message.buttons;
+              const buttonContainer = document.createElement('div');
+              buttonContainer.classList.add('message', 'button-container'); //remove late
+
+              buttons.forEach(button => {
+
+                // Create a div for each button
+                let listElement = document.createElement('div');
+
+
+                const buttonElement = document.createElement('button');
+                buttonElement.classList.add('button');
+
+                buttonElement.textContent = button.title;
+
+                buttonElement.addEventListener('click', () => {
+                  //buttonElement.disabled = true;
+                  buttonContainer.querySelectorAll('button').forEach(button => button.remove());
+                  if (button.payload.includes("https://")) {
+                    const anchorElement = document.createElement('a');
+                    anchorElement.href = button.payload;
+                    anchorElement.target = '_blank';
+                    console.log('Button payload:', button.payload);
+                    // Simulate click on the anchor element to trigger navigation
+                    anchorElement.click();
+                  } else {
+
+                    userInput.value = button.payload;
+
+                    sendMessage();
+
+                  }
+
+                });
+                buttonContainer.appendChild(buttonElement);
+                const otenElement = document.createElement('div');
+                otenElement.appendChild(buttonContainer);
+
+                console.log('button oten 1st');
+                chatMessages.appendChild(otenElement);
+              });
+
+
+            }
+
             messageElement.scrollIntoView(false);
             // Scroll to the latest message
             chatMessages.scrollTop = chatMessages.scrollHeight;
@@ -516,7 +352,11 @@ if (imageElement) {
     userInput.addEventListener('keypress', function (event) {
       // Check if the pressed key was Enter
       if (event.key === 'Enter') {
-        sendMessage();
+
+        // Check if the input field is not empty
+        if (userInput.value.trim() !== '') {
+          sendMessage();
+        }
       }
     });
 
