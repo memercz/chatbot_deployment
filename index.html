@@ -36,8 +36,8 @@
 
   </div>
   <div class="form-container">
-   <h4> This is an Undergraduate Thesis by Merc Ceasar S. Maiquilla. 
-For more inquiries, pls contact <a href="mailto:msmaiquilla@up.edu.ph">msmaiquilla@up.edu.ph</a>  </h4>
+    <p> This is a Undergraduate Thesis by Merc Ceasar S. Maiquilla.<br>
+      For more inquiries, pls contact <a href="mailto:msmaiquilla@up.edu.ph">msmaiquilla@up.edu.ph</a> </p>
   </div>
 
 
@@ -65,7 +65,6 @@ For more inquiries, pls contact <a href="mailto:msmaiquilla@up.edu.ph">msmaiquil
       chatMessages.appendChild(buttonGroup);
 
       let listElementAskInformation = document.createElement('div');
-      //listElementAskInformation.classList.add('button-group');
       buttonGroup.appendChild(listElementAskInformation);
 
       let buttonAskInformation = document.createElement('button');
@@ -74,21 +73,19 @@ For more inquiries, pls contact <a href="mailto:msmaiquilla@up.edu.ph">msmaiquil
       buttonAskInformation.innerHTML = "Academic Calendar";
       listElementAskInformation.appendChild(buttonAskInformation);
 
-      // Add event listener to "Ask Information" button
       buttonAskInformation.addEventListener('click', function () {
-        // Check if the image already exists
+
         userInput.value = "Give me academic calendar";
         sendMessage();
         buttonGroup.querySelectorAll('button').forEach(button => button.remove());
       });
       let listElementProcessFlows = document.createElement('div');
-      //listElementProcessFlows.classList.add('button-group');
-      // chatMessages.appendChild(listElementProcessFlows);
       buttonGroup.appendChild(listElementProcessFlows);
 
       let buttonProcessFlows = document.createElement('button');
-      buttonProcessFlows.innerHTML = "Process Flows";
+
       buttonProcessFlows.classList.add('button');
+      buttonProcessFlows.innerHTML = "Process Flows";
       listElementProcessFlows.appendChild(buttonProcessFlows);
 
       buttonProcessFlows.addEventListener('click', function () {
@@ -100,20 +97,22 @@ For more inquiries, pls contact <a href="mailto:msmaiquilla@up.edu.ph">msmaiquil
         sendMessage();
         buttonGroup.querySelectorAll('button').forEach(button => button.remove());;
       });
+
+
       let listElementRequestDocuments = document.createElement('div');
-buttonGroup.appendChild(listElementRequestDocuments);
+      buttonGroup.appendChild(listElementRequestDocuments);
 
-let buttonRequestDocuments = document.createElement('button');
-buttonRequestDocuments.innerHTML = "Request Documents";
-buttonRequestDocuments.classList.add('button');
-listElementRequestDocuments.appendChild(buttonRequestDocuments);
+      let buttonRequestDocuments = document.createElement('button');
+      buttonRequestDocuments.innerHTML = "Request Documents";
+      buttonRequestDocuments.classList.add('button');
+      listElementRequestDocuments.appendChild(buttonRequestDocuments);
 
-buttonRequestDocuments.addEventListener('click', function () {
-    // Set the userInput value to the desired message
-    userInput.value = "Available documents";
-    sendMessage();
-    buttonGroup.querySelectorAll('button').forEach(button => button.remove());
-});
+      buttonRequestDocuments.addEventListener('click', function () {
+        // Set the userInput value to the desired message
+        userInput.value = "Available documents";
+        sendMessage();
+        buttonGroup.querySelectorAll('button').forEach(button => button.remove());
+      });
     };
 
     const userInput = document.getElementById('user-input');
@@ -216,7 +215,7 @@ buttonRequestDocuments.addEventListener('click', function () {
               { FILENAME: "Guidelines on thesis defense application and submission.pdf", FILE_ID: "12y3wrocDk90fKbT7JNTUV9E4ja43D7ZX" },
               { FILENAME: "CSM Proposal_ template.dotx", FILE_ID: "12qce1WsJUoGFLuBWdKDbgkNXv0xQRnmC" },
               { FILENAME: "CSM Manuscript_Body_ template.dotx", FILE_ID: "13LdcWFlcKfOdDMl5UL2Tdt-m2XzkO2_o" },
-              { FILENAME: "Application for MSFS Comprehensive Exam.pdf", FILE_ID: "11DvRop_CZ4ZOC4XU-GA8DZa8sUMrRo8R"}
+              { FILENAME: "Application for MSFS Comprehensive Exam.pdf", FILE_ID: "11DvRop_CZ4ZOC4XU-GA8DZa8sUMrRo8R" }
             ];
 
             // Function to extact file ID from URL
