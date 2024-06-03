@@ -145,7 +145,7 @@ footer {
 .button-container {
     /* align-self: flex-start; */
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 5px;   
     width: 60%;
     align-items: stretch;
