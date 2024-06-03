@@ -187,6 +187,7 @@ footer {
     /* Align buttons horizontally */
     gap: 5px;
     /* Add some space between the buttons */
+    width: 50%;
 }
 
 .row-container {
