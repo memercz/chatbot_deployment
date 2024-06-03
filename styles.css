@@ -32,7 +32,12 @@ body {
     /* border: 1px solid black; */
 
 }
-
+/* Media query for screens smaller than 600px (typical breakpoint for mobile devices) */
+@media (max-width: 600px) {
+    .chat-widget-container {
+        width: 90%; /* Increase width to 90% on small screens */
+    }
+}
 .chat-title {
     
     text-align: center;
