@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CSM chatbot </title>
+  <title>KASSI </title>
   <!-- <style>
 
   </style> -->
@@ -17,7 +17,10 @@
   <!-- Chat widget container -->
   <div class="chat-widget-container">
     <div class="chat-title">
+      <img src="University_of_The_Philippines_seal.svg.png" alt="Logo" class="chat-logo"> 
       <h2>KASSI </h2>
+      <img src="Unibersidad_ng_Pilipinas_Mindanao.png" alt="Logo" class="chat-logo"> 
+      
 <!--       <h2>🌻CSM chatbot🌻 </h2> -->
 
 <!--       <p style="color: black;"> Kindly evaluate the chabot by filling out the form:
@@ -31,14 +34,17 @@
 
     <!-- User input and send button -->
     <div class="user-input-container">
+      <a href="https://github.com/memercz/what-is-CSM-Chatbot/blob/main/README.md" target="_blank">
+      <button id="about-btn"><i class="fas fa-question"></i></button>
+    </a>
       <input id="user-input" type="text" placeholder="Type your message...">
       <button id="send-button"><i class="fas fa-arrow-right"></i> </button>
+   
     </div>
 
   </div>
   <div class="form-container">
-    <p> This is an Undergraduate Thesis of Merc Ceasar S. Maiquilla<br>
-      Thesis Adviser: Cinmayii G. Manliguez <br>
+    <p> This is an Undergraduate Thesis of a BSCS student<br>
       For more inquiries, pls contact <a href="mailto:msmaiquilla@up.edu.ph">msmaiquilla@up.edu.ph</a> </p>
   </div>
 
@@ -48,7 +54,7 @@
     window.onload = function () {
       const chatMessages = document.getElementById('chat-messages');
       const messageElement = document.createElement('div');
-      messageElement.textContent = "Hi! 👋 I'm a chatbot for the College of Science and Mathematics. I can provide info on academic information, processes, and assist with finding documents. Don't forget to answer the form below to help me improve. 😊";
+      messageElement.textContent = "Hi! 👋 I'm KASSI, short for Kanluran Academic Support and Student Information, the friendly chatbot for the College of Science and Mathematics. I'm here to help you with academic information, processes, and finding documents. If you want to know more about how I work, just click the question mark button. 😊";
       messageElement.classList.add('message', 'bot-message');
       chatMessages.appendChild(messageElement);
 
@@ -115,6 +121,61 @@
         sendMessage();
         buttonGroup.querySelectorAll('button').forEach(button => button.remove());
       });
+//       let listElementAcademicEvents = document.createElement('div');
+// buttonGroup.appendChild(listElementAcademicEvents);
+
+// let buttonAcademicEvents = document.createElement('button');
+// buttonAcademicEvents.classList.add('button');
+// buttonAcademicEvents.innerHTML = "Academic Events";
+// listElementAcademicEvents.appendChild(buttonAcademicEvents);
+
+// buttonAcademicEvents.addEventListener('click', function () {
+//   userInput.value = "Show me academic events";
+//   sendMessage();
+//   buttonGroup.querySelectorAll('button').forEach(button => button.remove());
+// });
+
+// let listElementContactInformation = document.createElement('div');
+// buttonGroup.appendChild(listElementContactInformation);
+
+// let buttonContactInformation = document.createElement('button');
+// buttonContactInformation.classList.add('button');
+// buttonContactInformation.innerHTML = "Contact Information";
+// listElementContactInformation.appendChild(buttonContactInformation);
+
+// buttonContactInformation.addEventListener('click', function () {
+//   userInput.value = "Give me contact information";
+//   sendMessage();
+//   buttonGroup.querySelectorAll('button').forEach(button => button.remove());
+// });
+let idleTimeoutId;
+
+function resetIdleTimeout() {
+  clearTimeout(idleTimeoutId);
+  idleTimeoutId = setTimeout(sendIdleMessage, 20000);
+}
+
+let hasSentIdleMessage = false;
+
+function sendIdleMessage() {
+  if (!hasSentIdleMessage) {
+    const chatMessages = document.getElementById('chat-messages');
+    const messageElement = document.createElement('div');
+    messageElement.innerHTML = 'It seems you are done with your query. Please answer this form to help me improve: <a href="https://forms.gle/XCVBcZBfWFGdy6UY8" target="_blank">https://forms.gle/WjSiA6yUyhjdDx469</a>. Thank you! 😊';
+    messageElement.classList.add('message', 'bot-message');
+    chatMessages.appendChild(messageElement);
+    hasSentIdleMessage = true;
+  }
+}
+
+
+// Reset the idle timeout whenever the user interacts with the page
+//window.addEventListener('mousemove', resetIdleTimeout);
+window.addEventListener('keydown', resetIdleTimeout);
+//window.addEventListener('scroll', resetIdleTimeout);
+
+// Initialize the idle timeout
+resetIdleTimeout();
     };
 
     const userInput = document.getElementById('user-input');
@@ -144,7 +205,7 @@
       chatMessages.scrollTop = chatMessages.scrollHeight;
       // Add typing indicator
       chatMessages.appendChild(typingIndicator);
-      fetch('https://ae3b-2001-4456-c66-6c00-39d1-33e5-6eea-e2af.ngrok-free.app/webhooks/rest/webhook', {
+      fetch(https://ae3b-2001-4456-c66-6c00-39d1-33e5-6eea-e2af.ngrok-free.app/webhooks/rest/webhook', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
