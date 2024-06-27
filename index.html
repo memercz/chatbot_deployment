@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CSM Chatbot</title>
+  <title>KASSI </title>
   <!-- <style>
 
   </style> -->
@@ -16,9 +16,10 @@
 
   <!-- Chat widget container -->
   <div class="chat-widget-container">
+   
     <div class="chat-title">
       <img src="University_of_The_Philippines_seal.svg.png" alt="Logo" class="chat-logo"> 
-      <h2>KASSI: CSM Chatbot</h2>
+      <h2>KASSI </h2>
       <img src="Unibersidad_ng_Pilipinas_Mindanao.png" alt="Logo" class="chat-logo"> 
       
 <!--       <h2>🌻CSM chatbot🌻 </h2> -->
@@ -29,6 +30,8 @@
 <!--       <p> Matulog sa ko mga iskolar 😴. Be back soon </p> -->
 
     </div>
+    <div class="chat-unavailable-message">
+      🌻 Kassi 🌻 is on a little break and can't reply right now. Will get back to you soon! 😊🌈✨</div>
     <!-- Chat messages container -->
     <div id="chat-messages"> </div>
 
@@ -44,8 +47,7 @@
 
   </div>
   <div class="form-container">
-    <p> This is an Undergraduate Thesis of Merc Ceasar S. Maiquilla<br>
-      Thesis Adviser: Cinmayii G. Manliguez <br>
+    <p> This is an Undergraduate Thesis of a BSCS student<br>
       For more inquiries, pls contact <a href="mailto:msmaiquilla@up.edu.ph">msmaiquilla@up.edu.ph</a> </p>
   </div>
 
@@ -153,7 +155,7 @@ let idleTimeoutId;
 
 function resetIdleTimeout() {
   clearTimeout(idleTimeoutId);
-  idleTimeoutId = setTimeout(sendIdleMessage, 40000);
+  idleTimeoutId = setTimeout(sendIdleMessage, 20000);
 }
 
 let hasSentIdleMessage = false;
@@ -206,7 +208,7 @@ resetIdleTimeout();
       chatMessages.scrollTop = chatMessages.scrollHeight;
       // Add typing indicator
       chatMessages.appendChild(typingIndicator);
-      fetch('https://ab0a-124-217-116-231.ngrok-free.app/webhooks/rest/webhook', {
+      fetch('http://localhost:5005/webhooks/rest/webhook', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
